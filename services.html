@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- DESARROLLADO POR : RONALDO ROMAN  -->
+<html lang="en">
+  <head>
+    <title>ACEROS LA RESERVA SAC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logoaceros7.png">
+
+  </head>
+  
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+          <div class="container">
+              <a class="navbar-brand" href="index.html"><img src="images/logo_sin_fondo.svg" alt="ACEROS LA RESERVA SAC"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span> Menu
+                  </button>
+                              <div class="collapse navbar-collapse" id="ftco-nav">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link">INICIO</a></li>
+                                    <li class="nav-item"><a href="about.html" class="nav-link">NOSOTROS</a></li>
+                                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICIOS</a></li>
+
+                                    <li id="menu-productos"></il>
+
+                                      <script>
+                                        fetch('menuproductos.html')
+                                          .then(response => response.text())
+                                          .then(data => {
+                                            document.getElementById('menu-productos').innerHTML = data;
+                                          })
+                                          .catch(error => console.error('Error cargando el menú:', error));
+                                      </script>
+                                  <li class="nav-item"><a href="contact.html" class="nav-link">CONTACTO</a></li>
+                                 </ul>
+                              </div>
+          </div>  
+	 </nav>
+
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/servi2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">INICIO<i class="ion-ios-arrow-forward"></i></a></span> <span>SERVICIOS<i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Nuestros Servicios</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Arial, sans-serif;
+      }
+      .seccion {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+          flex-wrap: wrap;
+      }
+      .contenido {
+          width: 50%;
+          padding: 20px;
+      }
+      .contenido h2 {
+          background-color: #333;
+          color: #fff;
+          display: inline-block;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      .contenido p {
+          margin-top: 10px;
+          font-size: 18px;
+      }
+      .contenido p strong {
+          font-weight: bold;
+      }
+      .imagen {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .imagen img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+          object-fit: cover;
+      }
+      
+      @media (max-width: 768px) {
+          .seccion {
+              flex-direction: column;
+              text-align: center;
+          }
+          .contenido, .imagen {
+              width: 100%;
+          }
+      }
+  </style>
+    <section class="seccion">
+      <div class="imagen">
+        <img src="images/serv.png" alt="Máquina de corte láser">
+    </div>
+      <div class="contenido">
+          <h2>SERVICIOS</h2>
+          <p style="color: black !important;"><strong>Contamos con la experiencia requerida para brindar una solución adecuada y justa a tus necesidades. Te ayudamos en tus proyectos, incrementar tus ganancias o tiempos de entregas.</p>
+      </div>
+      
+  </section>
+  <section class="seccion">
+    <div class="contenido">
+        <h2>Cortes Oxicorte</h2>
+        <p style="color: black !important;"><strong>Cortes de planchas de acero con técnica de corte por oxidación mediante una llama. Cortes en línea recta y círculo sobre superficies planas. Contamos con equipos que permiten hacer cortes de gran precisión y calidad, dado que la inclinación y altura de la boquilla de corte respecto a la lámina se mantiene constante en todo el recorrido.</strong></p>
+    </div>
+    <div class="imagen">
+        <img src="images/oxicorte2.jpg" alt="Máquina de corte láser">
+    </div>
+</section>
+
+<section class="seccion">
+ 
+  <div class="imagen">
+      <img src="images/transporte23.jpg" alt="Máquina de corte láser">
+  </div>
+  <div class="contenido">
+    <h2>Transporte (Nacional – Internacional)</h2>
+    <p style="color: black !important;"><strong>Nuestras estrategias, flota y compromiso con la excelencia nos permiten satisfacer las necesidades de nuestros clientes de manera eficiente y confiable. Comprometidos con los tiempos de entregas establecidos.</p>
+</div>
+</section>
+    
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"><a  class="logo">ACEROS<span> LA RESERVA</span></a></h2>
+              <p>Tu empresa de confianza dedicada a la importación y comercialización de aceros, ofreciendo productos y servicios de calidad para los rubros de Construcción, Industria, Minería y demás..</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61555660312418"><span >
+                  <img src="images/facebook-logo.png" alt="Facebook" style="width: 30px; height: 30px;">
+                </span></a></li>
+                <li class="ftco-animate"><a href="https://api.whatsapp.com/send/?phone=51946174306&text&type=phone_number&app_absent=0"><span >
+                  <img src="images/whatsapp-icon.png" alt="Facebook" style="width: 30px; height: 30px;">
+                </span></a></li>  
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61555660312418"><span >
+                  <img src="images/icon-instagram.png" alt="Facebook" style="width: 30px; height: 30px;">
+                </span></a></li>
+              </ul> 
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+             <h2 class="ftco-heading-2">Información</h2>
+             <ul class="list-unstyled">
+               <li><a href="index.html" class="py-2 d-block">Inicio</a></li>
+               <li><a href="about.html" class="py-2 d-block">Nosotros</a></li>
+               <li><a href="services.html" class="py-2 d-block">Servicios</a></li>
+               <li><a href="contact.html" class="py-2 d-block">Contactanos</a></li>
+             </ul>
+           </div>
+         </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">¿Tienes dudas?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">LIMA - LURIGANCHO CHOSICA</span></li>
+                  <li><span class="icon icon-phone"></span><span class="text">946 174 306</span></li>
+
+	                <li><span class="icon icon-envelope"></span><span class="text">ventas@aceroslareserva.com</span></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta pagina web fue realizada por Developer Ronaldo Roman
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+   <style>
+   .ftco-footer {
+    padding: 20px 0; /* Reduce el espacio superior e inferior del footer */
+}
+.ftco-footer, .footer-bottom {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.footer-bottom {
+    padding-top: 10px;   /* Menos espacio superior */
+    padding-bottom: 1px; /* Menos espacio inferior */
+}
+.ftco-footer-widget {
+    margin-bottom: 50px; /* Reduce el margen inferior de cada widget */
+}
+
+.ftco-footer .row {
+    margin-bottom: 5px; /* Ajusta el espacio entre filas */
+}
+.ftco-footer .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .ftco-footer {
+        padding: 20px 0;
+    }
+    .ftco-footer-widget {
+        margin-bottom: 15px;
+    }
+}
+
+   </style>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

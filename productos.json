@@ -1,0 +1,521 @@
+{
+    "astm_a36": {
+      "seccion":"PLANCHAS ESTRUCTURALES",
+      "titulo": "ASTM A36",
+      "categoria": "PLANCHAS ESTRUCTURALES", 
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las planchas de acero A36 es un material de acero al carbono estructural que se utiliza para fabricar estructuras metálicas. Se caracteriza por tener un bajo contenido de carbono, lo que facilita su mecanizado, soldadura y conformado.",
+      "usos": "USOS: ",
+      "descripcion2": "Estructuras metálicas, equipos mecánicos, silos de almacenamiento, puentes, para perfiles conformados en frio, perfiles soldados, etc.",
+      "imagen": "images/astm_a36.jpg",
+      "fondoimagen": "images/astm_a36.jpg",
+      "pdf": "pdf/FT_ASTM_A36.pdf"
+    },
+    "astm_a131": {
+      "seccion":"PLANCHAS ACERO NAVAL",
+      "titulo": "NAVAL ASTM A131 Gr A",
+      "categoria": "PLANCHAS ACERO NAVAL",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Plancha de acero al carbono laminada en caliente obtenido a partir de acero estructural naval. De mediana resistencia utilizado en todo tipo de construcciones estructurales, con amplia aplicación a la industria naval, su principal característica es la alta soldabilidad y maleabilidad para el propósito naviero.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcción de embarcaciones pesqueras, chatas, pangas, boyas, tanques, tolvas, reparación y mantenimiento, etc.",
+      "imagen": "images/ASTM_A131_Gr_A.png",
+      "fondoimagen": "images/ASTM_A131_Gr_A.png",
+      "pdf": "pdf/FT_ASTM 131 Gr A.pdf"
+
+    },  
+
+
+
+
+    "LR_Gr_A": {
+      "seccion":"PLANCHAS ACERO NAVAL",
+      "titulo": "LR Gr A",
+      "categoria": "PLANCHAS ACERO NAVAL",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "El acero LR A es un tipo de acero de resistencia a la tracción general laminado en caliente. El acero de construcción naval LR de resistencia general viene en 12 grados de 3 resistencias, el grado A es uno de los grados. Las placas de acero LR grado A tienen un límite elástico de 235 MPa y una resistencia máxima a la tracción de 400-520 MPa.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcción de embarcaciones pesqueras, chatas, pangas, boyas, tanques, tolvas, reparación y mantenimiento, etc.",
+      "imagen": "images/LR_Gr_A.jpg",
+      "fondoimagen": "images/LR_Gr_A.jpg",
+      "pdf": "pdf/LR_Gr_A.pdf"
+
+    },
+
+    "astm_a572_gr_50": {
+      "seccion":"PLANCHAS ESTRUCTURALES",
+      "titulo": "ASTM A572 Gr 50",
+      "categoria": "PLANCHAS ESTRUCTURALES",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Plancha de acero al carbono laminada en caliente obtenido a partir de acero estructural de alta resistencia mecánica industrial.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcción de edificios, grúas puente, perfilería para estantería metálica pesada, equipos mecánicos, tanques, vigas soldadas, tolvas, partes para carrocerías, etc.",
+      "imagen": "images/ASTM_A572_Gr_50.png",
+      "fondoimagen": "images/ASTM_A572_Gr_50.png",
+      "pdf": "pdf/FT_ASTM 572 Gr 50.pdf"
+
+    }, 
+    "Q_345_Gr_50": {
+      "seccion":"PLANCHAS ESTRUCTURALES",
+      "titulo": "Q 345 Gr 50",
+      "categoria": "PLANCHAS ESTRUCTURALES",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "El acero Q345 es un acero estructural de alta resistencia y baja aleación muy utilizado en construcción e ingeniería. La Q significa límite elástico, y 345 indica un límite elástico de 345 MPa. Conocido por sus excelentes propiedades mecánicas, como una resistencia a la tracción de 470-660 MPa, buena ductilidad y tenacidad.",
+      "usos": "USOS: ",
+      "descripcion2": "Ideal para construir puentes, edificios, recipientes de baja presión, grúas, piezas mecánicas, puentes, barcos, tanques de almacenamiento de petróleo, maquinaria de elevación, centrales eléctricas, maquinaria minera, piezas metálicas en general y en otras estructuras expuestas a temperaturas de -40 ℃ o inferiores o que experimentan cargas elevadas.",
+      "imagen": "images/Q_345_Gr_50.jpg",
+      "fondoimagen": "images/Q_345_Gr_50.jpg",
+      "pdf": "pdf/FT_Q345_Gr_50.pdf"
+
+    },
+    "brinell": {
+      "seccion":"PLANCHAS ANTIABRASIVAS",
+      "titulo": "BRINELL 400 / 450 / 500",
+      "categoria": "PLANCHAS ANTIABRASIVAS",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Son planchas de acero aleado de alta resistencia al desgaste por abrasión, obtenida mediante un proceso de tratamiento térmico de endurecimiento y revenido con el fin de alcanzar la dureza ideal para un trabajo específico. aumenta la capacidad de carga en maquinarias específicas y alarga la vida útil, al mismo tiempo que cuenta con buenas propiedades de procesabilidad y resistencia.",
+      "usos": "USOS: ",
+      "descripcion2": "Tolvas, cribas, tolvas de cangilones, elementos trituradores, palas de motoniveladoras, cangilones de cargador frontal, en industria, ciclones, cangilones de chatarra, contenedores, carros compactadores, rodillos, correderas, etc.",
+      "imagen": "images/ANTIABRASIVA_450.png",
+      "fondoimagen": "images/ANTIABRASIVA_450.png",
+      "pdf": "pdf/FT_ANTIABRASIVAS.pdf"
+
+    },
+    "ASTM_A516_Gr_70PAR": {
+      "seccion":"PLANCHAS PARA RECIPIENTES A PRESIÓN",
+      "titulo": "ASTM A516 Gr 70",
+      "categoria": "PLANCHAS PARA RECIPIENTES A PRESIÓN",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las planchas A516 grado 70 son placas de acero al carbono de alta resistencia que se utilizan para fabricar recipientes a presión. Son aptas para procesos de soldadura y conformación mecánica. Son capaces de resistir elevadas presiones a diferentes temperaturas, tienen alta resistencia al agrietamiento por fragilidad y Tienen buenos niveles de soldabilidad y resiliencia.",
+      "usos": "USOS: ",
+      "descripcion2": "Calderas, Tuberías a presión o de vapor, Termos industriales, Intercambiadores de calor, Reactores, Vasos transportadores.",   
+      "imagen": "images/ASTM_A516_Gr_70.png",
+      "fondoimagen": "images/ASTM_A516_Gr_70.png",
+      "pdf": "pdf/FT_ASTM 516 Gr 70.pdf"
+
+    }, 
+    "ASTM_A514_Gr_B": {
+      "seccion":"PLANCHA DE ALTA RESISTENCIA",
+      "titulo": "ASTM A514 Gr B",
+      "categoria": "PLANCHA DE ALTA RESISTENCIA",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Plancha de acero de aleación para aplicaciones estructurales que requieren un alto límite elástico combinado con buena conformabilidad y dureza. La soldadura de las planchas A514 Grado B debe realizarse de acuerdo con el código de soldadura aplicable. Las planchas A514 Grado B tienen buenas características de conformado en frío.",
+      "usos": "USOS: ",
+      "descripcion2": "Fabricación remolques de transporte, equipos para construcción, brazos de grúas, elevadores de hombre móviles, equipos agrícolas, marcos y chasis de vehículos pesados y elementos estructurales de puentes grúas.",   
+      "imagen": "images/ASTM_A514_Gr_B.jpg",
+      "fondoimagen": "images/ASTM_A514_Gr_B.jpg",
+      "pdf": "pdf/FT_A514_Gr_B.pdf"
+
+    }, 
+
+    "OPTIM_/_HITEM_S700_MC": {
+      "seccion":"PLANCHA DE ALTA RESISTENCIA",
+      "titulo": "OPTIM / HITEM S700 MC",
+      "categoria": "PLANCHA DE ALTA RESISTENCIA",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Plancha de acero estructural micro aleado de altas propiedades mecánicas.",
+      "usos": "USOS: ",
+      "descripcion2": "Grúas telescópicas, plataformas aéreas, bombas de hormigón, volquetes, manipuladores, etc.",   
+      "imagen": "images/OPTIM_HITEM_S700_MC.jpg",
+      "fondoimagen": "images/OPTIM_HITEM_S700_MC.jpg",
+      "pdf": "pdf/OPTIM_HITEM_S700_MC.pdf"
+
+    },
+
+    "ASTM_A709_Gr_50PAR": {
+      "seccion":"PLANCHAS ESTRUCTURALES",
+      "titulo": "ASTM A709 Gr 50",
+      "categoria": "PLANCHAS ESTRUCTURALES",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Plancha de acero al carbono laminada en caliente obtenido a partir de acero estructural de alta resistencia mecánica.",
+      "usos": "USOS: ",
+      "descripcion2": "Puentes, vigas soldadas, construcción de edificios, grúas puente, equipos mecánicos, material rodante, pilotes, tanques, etc.",
+      "imagen": "images/ASTM_A709_Gr_50.png",
+      "fondoimagen": "images/ASTM_A709_Gr_50.png",
+      "pdf": "pdf/FT_ASTM 709 Gr 50.pdf"
+
+    },
+    "ASTM_A612": {
+      "seccion":"PLANCHAS PARA RECIPIENTES A PRESIÓN",
+      "titulo": "ASTM A612",
+      "categoria": "PLANCHAS PARA RECIPIENTES A PRESIÓN",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Planchas de acero calmado con aleación de manganeso y silicio de alta resistencia. Diseñadas para fabricar recipientes a presión con moderada y baja temperatura de servicio.",
+      "usos": "USOS: ",
+      "descripcion2": "Ideal para la fabricación de tanques de GLP, GNV soterrados, graneleros, estacionarios y cisternas.",
+      "imagen": "images/ASTM_A612.jpg",
+      "fondoimagen": "images/ASTM_A612.jpg",
+      "pdf": "pdf/FT_ASTM A612.pdf"
+
+    },
+    "ASTM_A516_Gr_70/60": {
+      "seccion":"PLANCHAS PARA CALDERAS",
+      "titulo": "ASTM A516 Gr 70/60",
+      "categoria": "PLANCHAS PARA CALDERAS",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las planchas A516 son placas de acero al carbono de alta resistencia que se utilizan para fabricar recipientes a presión. Son aptas para procesos de soldadura y conformación mecánica. Son capaces de resistir elevadas presiones a diferentes temperaturas, tienen alta resistencia al agrietamiento por fragilidad y Tienen buenos niveles de soldabilidad y resiliencia.",
+      "usos": "USOS: ",
+      "descripcion2": "Calderas, Tuberías a presión o de vapor, Termos industriales, Intercambiadores de calor, Reactores, Vasos transportadores.",
+      "imagen": "images/ASTM_A516_Gr_70PTP.jpg",
+      "fondoimagen": "images/ASTM_A516_Gr_70PTP.jpg",
+      "pdf": "pdf/FT_ASTM 516 Gr 70.pdf"
+
+    },  
+    "ASTM_515_GR_70": {
+      "seccion":"PLANCHAS PARA CALDERAS",
+      "titulo": "ASTM 515 GR 70",
+      "categoria": "PLANCHAS PARA CALDERAS",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "La placa de acero ASTM A515 es una especificación para placas de recipientes a presión destinadas a usarse en aplicaciones de temperatura moderada a alta. Este material se utiliza principalmente en la fabricación de recipientes a presión y calderas industriales, donde la alta resistencia y la excelente tenacidad son esenciales.",
+      "usos": "USOS: ",
+      "descripcion2": "Fabricación de recipientes a presión para la industria del petróleo y el gas, construcción de calderas e intercambiadores de calor, fabricación de tanques de almacenamiento industriales y otros equipos sensibles a la presión, aplicaciones donde se requieren alta resistencia y durabilidad, especialmente en entornos de alta temperatura.",
+      "imagen": "images/ASTM_515_GR_70.jpg",
+      "fondoimagen": "images/ASTM_515_GR_70.jpg",
+      "pdf": "pdf/FT_ASTM_515_Gr_70.pdf"
+
+    },
+
+    "ASTM_A285_Gr_C": {
+      "seccion":"PLANCHAS PARA CALDERAS",
+      "titulo": "ASTM A285 Gr C",
+      "categoria": "PLANCHAS PARA CALDERAS",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Planchas LAC ASTM A285 Grado C para calderas de aceros al carbono para esfuerzos bajos e intermedios, Este material tiene la misma resistencia a la corrosión atmosférica que el acero al carbono simple, pero esto puede ser mejorado por el uso de cobre adicional. son aceros calmados y semi-calmados, excelente para el rolado y facilidad de soldado.",
+      "usos": "USOS: ",
+      "descripcion2": "Fabricación de recipientes estacionarios, acumuladores, calentadores y calderas.",
+      "imagen": "images/A285_Gr_C.png",
+      "fondoimagen": "images/A285_Gr_C.png",
+      "pdf": "pdf/FT_ASTM A285 Gr C.pdf"
+
+    },
+    "ASTM_A242": {
+      "seccion":"PLANCHAS ACERO COR-TEN",
+      "titulo": "ASTM A242",
+      "categoria": "PLANCHAS ACERO COR-TEN",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Planchas de Acero estructural de Grano fino, que por su aleación tiene una alta resistencia mecánica y notable resistencia a la corrosión atmosférica, debido a la formación de una capa protectora. Por este motivo es recomendado para la construcción y reparación de containers que están expuestos en la travesía, a la fuerte corrosión del ambiente marino.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcciones metálicas, puentes, estructuras, fachadas de edificios, puertas metálicas, bordillos, alcorques, fuentes. Industria cementera, silos, tolvas, cribadoras, chimeneas, tuberías, jardineras, lavaderos de carbón, depósitos de agua, petróleo. Hormigoneras, grúas, palas excavadoras, vagones de ferrocarril, chasis de camiones, basculantes, cisternas, semi-remolques.",
+      "imagen": "images/ASTM_A242.jpg",
+      "fondoimagen": "images/ASTM_A242.jpg",
+      "pdf": "pdf/FT_ASTM 242 Gr B.pdf"
+
+    },
+    "ASTM_A588": {
+      "seccion":"PLANCHAS ACERO COR-TEN",
+      "titulo": "ASTM A588 GR B",
+      "categoria": "PLANCHAS ACERO COR-TEN",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": " El acero corten es un acero común al que no le afecta la corrosión. Su composición química (aleación de acero con níquel, cromo, cobre y fósforo) hace que su oxidación tenga unas características especiales que protegen la pieza frente a la corrosión atmosférica. De ahí que este material tenga un gran valor y la oxidación haya pasado a ser voluntaria y controlada.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcciones metálicas, puentes, estructuras, fachadas de edificios, puertas metálicas, bordillos, alcorques, fuentes, iindustria cementera.",
+      "imagen": "images/ASTM_A588_Gr_B.png",
+      "fondoimagen": "images/ASTM_A588_Gr_B.png",
+      "pdf": "pdf/FT_ASTM 588 Gr B.pdf"
+
+    }, 
+    "ASTM_A178": {
+      "seccion":"TUBOS PARA CALDERAS",
+      "titulo": "ASTM A178",
+      "categoria": "TUBOS PARA CALDERAS",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Especificación estándar ASTM a178/A 178M para tubos de calderas y sobre calentadores de acero al carbono y acero al carbono-manganeso soldados por resistencia eléctrica. La tubería ASTM A178 es una tubería ERW de acero al carbono y manganeso al carbono que se utiliza en calderas, conductos de humos de calderas y sobre calentadores.",
+      "usos": "USOS: ",
+      "descripcion2": "Fabricación de calderas, sobrecalentadores, intercambiadores de calor, y otros equipos de presión.",
+      "imagen": "images/ASTM_A178.jpeg",
+      "fondoimagen": "images/ASTM_A178.jpeg",
+      "pdf": "pdf/ASTM_A178.pdf"
+
+    },
+
+    "ASTM_A179": {
+      "seccion":"TUBOS PARA CALDERAS",
+      "titulo": "ASTM A179",
+      "categoria": "TUBOS PARA CALDERAS",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Los tubos ASTM A179 se utilizan en intercambiadores de calor, condensadores, calderas y otros aparatos para transferir calor. Son tubos de acero sin costura, de bajo contenido de carbono, y se laminan en frío.",
+      "usos": "USOS: ",
+      "descripcion2": "En la industria petrolera, para procesos de refinación y enfriamiento, para intercambiadores de calor, para condensadores, en compañías de gas natural, para intercambiadores de calor.",
+      "imagen": "images/ASTM_A179.jpg",
+      "fondoimagen": "images/ASTM_A179.jpg",
+      "pdf": "pdf/FT_TUBO ASTM A179.pdf"
+
+    },
+    "ASTM_A_192": {
+      "seccion":"TUBOS PARA CALDERAS",
+      "titulo": "ASTM A192",
+      "categoria": "TUBOS PARA CALDERAS",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Tubos de acero, sin costura, debajo contenido de carbono, de sección circular, laminados en caliente fabricados bajo norma ASTM A192.",
+      "usos": "USOS: ",
+      "descripcion2": "Calderas, intercambiadores de calor, hornos de refinerías, sobrecalentadores, servicios de alta temperatura y aparatos similares para transferencia de calor.",
+      "imagen": "images/ASTM_A_192.jpg",
+      "fondoimagen": "images/ASTM_A_192.jpg",
+      "pdf": "pdf/FT_TUBO ASTM A192.pdf"
+
+    },
+    "TUBOS_ACERO_A53": {
+      "seccion":"TUBOS DE ACERO AL CARBONO CON Y SIN COSTURA",
+      "titulo": "SCH 40/80/160",
+      "categoria": "TUBOS DE ACERO AL CARBONO CON Y SIN COSTURA",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Tubo de acero negro sin costura, tri-norma A53 / ASTM A106 / API 5L Esta tubería está destinada a aplicaciones mecánicas y de presión y también es aceptable para usos ordinarios en la conducción de vapor, agua, gas, y las líneas de aire. Este tipo de tubería es apta para ser soldada y roscada. La vida útil corresponde al uso en condiciones normales para lo que fue fabricada.",
+      "usos": "USOS: ",
+      "descripcion2": "Construcción de estructuras resistentes en la construcción civil, transporte de petróleo, gas, agua, vapor y aire. Perforación de pozos subterráneo, fabricación de turbinas eólicas, construcción de oleoductos y gasoductos.",
+      "imagen": "images/SCH_40.png",
+      "fondoimagen": "images/SCH_40.png",
+      "pdf": "pdf/FT_TUBO SCH 40, 80, 160.pdf"
+
+    }, 
+    "SCH_ESTANDAR": {
+      "seccion":"TUBOS DE ACERO AL CARBONO CON Y SIN COSTURA",
+      "titulo": "SCH ESTÁNDAR",
+      "categoria": "TUBOS DE ACERO AL CARBONO CON Y SIN COSTURA",
+      "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Tubo para alta presión (SCH) fabricado con/sin costura (SEAMLESS) con acero al carbono de calidad estructural, utilizando la técnica de extrusión en caliente.",
+      "usos": "USOS: ",
+      "descripcion2": "Conducción de fluidos a alta temperatura y/o presión en minería, pesca, petróleo, construcción y servicio en general.",
+      "imagen": "images/SCH_ESTANDAR.png",
+      "fondoimagen": "images/SCH_ESTANDAR.png",
+      "pdf": "pdf/SCH_ESTANDAR.pdf"
+
+    },
+
+    "ASTM_A500_Gr_A": {
+      "seccion":"TUBOS ESTRUCTURALES",
+      "titulo": "ASTM A500 Gr A",
+      "categoria": "TUBOS ESTRUCTURALES",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Este grado de acero cubre las tuberías de acero al carbono soldadas y sin costura conformadas en frío que se utilizan para fines de construcción. ASTM A500 Grado A es el grado de acero más bajo en el estándar ASTM A500 y, por lo tanto, es el grado de acero más común utilizado en aplicaciones estructurales. Tiene buenas propiedades de soldabilidad y formabilidad, así como excelentes propiedades de resistencia. Además, la tubería de grado A también es adecuada para aplicaciones de alta temperatura. Por estas razones, el grado A es el grado de acero elegido para muchas aplicaciones estructurales.",
+      "usos": "USOS: ",
+      "descripcion2": "Soportes estructurales, Columnas de edificios, señales de carreteras, servicios de yacimientos petrolíferos, torres de comunicación, estructuras metálicas livianas, vigas, tijerales, carrocerías.",
+      "imagen": "images/A_500_Gr_A.jpg",
+      "fondoimagen": "images/A_500_Gr_A.jpg",
+      "pdf": "pdf/FT_TUBO ASTM A500 Gr A.pdf"
+
+    },
+    "ASTM_A500_Gr_B": {
+      "seccion":"TUBOS ESTRUCTURALES",
+      "titulo": "ASTM A500 Gr B",
+      "categoria": "TUBOS ESTRUCTURALES",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Los tubos A500 Gr B son un tipo de acero estructural que se utiliza en aplicaciones que requieren una mayor resistencia y durabilidad.  están diseñados específicamente para aplicaciones estructurales, ofreciendo alta resistencia y capacidad de carga. En comparación con los tubos A36 y A53, más comunes para aplicaciones generales, los tubos de acero A500 ofrecen una resistencia estructural superior y son más adecuados para proyectos de construcción de alta resistencia.",
+      "usos": "USOS: ",
+      "descripcion2": "Columnas, Vigas, Tijerales, Carrocerías, Defensas viales, Puentes peatonales y vehiculares, Semáforos, Vallas publicitarias.",
+      "imagen": "images/A500_Gr_B.jpg",
+      "fondoimagen": "images/A500_Gr_B.jpg",
+      "pdf": "pdf/FT_ASTM A500 Gr B.pdf"
+
+    }, 
+   "SAE_1018": {
+      "seccion":"EJES Y BARRAS DE ACERO",
+      "titulo": "SAE 1018",
+      "categoria": "EJES Y BARRAS DE ACERO",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "De buena soldabilidad y ligeramente de mejor maquinabilidad que los aceros con grados menores de carbono. De acuerdo con el proceso de fabricación al que es sometido son las propiedades mecánicas que poseen. 1018 acero es una tipología de bajo carbono y con alto porcentaje de manganeso y ductilidad buena. Tiene baja resistencia mecánica y alta tenacidad adecuada para la fabricación de piezas de maquinaria, donde regularmente se demanda uniformidad en la dureza del material.",
+      "usos": "USOS: ",
+      "descripcion2": "Se utiliza en operaciones de deformación plástica como remachado y extrusión. Es usado también en componentes de maquinaria debido a su facilidad para conformarlo y soldarlo. Algunas piezas típicas son los pines, cuñas, remaches, rodillos, piñones, pasadores y tornillos.",
+      "imagen": "images/SAE_1018.jpg",
+      "fondoimagen": "images/SAE_1018.jpg",
+      "pdf": "pdf/SAE_1018.pdf"
+
+    },
+
+    "SAE_1020": {
+      "seccion":"EJES Y BARRAS DE ACERO",
+      "titulo": "SAE 1020",
+      "categoria": "EJES Y BARRAS DE ACERO",
+     "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "La barra maciza de acero SAE 1020, posee bajo contenido de carbono, de buena maquinabilidad y soldabilidad. Usado en aplicaciones de baja resistencia y tenacidad. Por su alta ductilidad pueden ser embutidas y forjadas. Pueden aumentar su dureza con tratamientos térmicos de cementación.",
+      "usos": "USOS: ",
+      "descripcion2": "Usado general en componentes mecánicos sometidos a bajos esfuerzos, tales como ejes, bridas, remaches, pernos grado 2, prensas y levas, acoples para sistemas hidráulicos, pasadores, bujes, eslabones y cadenas.",
+      "imagen": "images/SAE_1020.jpg",
+      "fondoimagen": "images/SAE_1020.jpg",
+      "pdf": "pdf/FT_BARRA SAE 1020.pdf"
+
+    },
+    "SAE_1045": {
+      "seccion":"EJES Y BARRAS DE ACERO",
+      "titulo": "SAE 1045",
+      "categoria": "EJES Y BARRAS DE ACERO",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "El acero AISI / SAE 1045 posee un mediano contenido de carbono y es ampliamente utilizado en elementos estructurales que requieran mediana resistencia mecánica y tenacidad a bajo costo. Además, presenta una baja soldabilidad, buena maquinabilidad y excelente forjabilidad.",
+      "usos": "USOS: ",
+      "descripcion2": "Es utilizado para todo tipo de elementos que requieren de dureza y tenacidad como ejes, manivelas, chavetas, engranajes de baja velocidad, pasadores y cigüeñales.",
+      "imagen": "images/TSAE_1045.jpg",
+      "fondoimagen": "images/TSAE_1045.jpg",
+      "pdf": "pdf/FT_BARRA SAE 1045.pdf"
+
+    }, 
+    "SAE_4140": {
+      "seccion":"EJES Y BARRAS DE ACERO",
+      "titulo": "SAE 4140",
+      "categoria": "EJES Y BARRAS DE ACERO",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Acero de baja aleación al Cromo Molibdeno. Se suministra con o sin tratamiento de bonificado (temple y revenido). es ampliamente utilizado en la fabricación de piezas de medianas dimensiones que demandan una alta resistencia mecánica y tenacidad. ofrece una buena maquinabilidad, lo que facilita su procesamiento en diversas formas y dimensiones. Sin embargo, es importante destacar que posee una baja soldabilidad, lo cual puede limitar su uso en aplicaciones que requieran uniones soldadas extensas o complejas.",
+      "usos": "USOS: ",
+      "descripcion2": "Es utilizado en piezas de medianas dimensiones que exigen elevada dureza, resistencia mecánica y tenacidad, tales como: ejes, pasadores, cigüeñales, barras de torsión, engranajes de baja velocidad, tuercas y pernos sometidos a grandes esfuerzos, árboles de transmisión, émbolos, bielas y rotores.",
+      "imagen": "images/SAE_4140.jpg",
+      "fondoimagen": "images/SAE_4140.jpg",
+      "pdf": "pdf/SAE_4140.pdf"
+
+    }, 
+
+    "PERFORADOS": {
+      "seccion":"EJES Y BARRAS DE ACERO",
+      "titulo": "PERFORADOS",
+      "categoria": "EJES Y BARRAS DE ACERO",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las barras perforadas son secciones circulares de acero perforado que se utilizan en aplicaciones estructurales, mecánicas y de mecanizado. Características Son de acero al carbono, Tienen alta resistencia, Son soldables, Son maquinables, Se pueden fabricar a la medida.",
+      "usos": "USOS: ",
+      "descripcion2": "Se utilizan en la construcción de partes y piezas de mediana exigencia, aplicaciones estructurales y mecánicas, abricar componentes de maquinaria que requieran alta resistencia",
+      "imagen": "images/perforados.jpg",
+      "fondoimagen": "images/perforados.jpg",
+      "pdf": "pdf/SAE_4140.pdf"
+
+    },
+
+    "VIGAS_H_e_I": {
+      "seccion":"VIGAS Y PERFILES",
+      "titulo": "VIGAS H e I",
+      "categoria": "VIGAS Y PERFILES",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las vigas H y las vigas I son perfiles de acero estructurales que se utilizan en la construcción. Son acero laminado en caliente, de sección transversal en forma de “H” e “I”, aleado con Niobio y Vanadio como afinadores de grano.",
+      "usos": "USOS: ",
+      "descripcion2": "Estructuras metálicas para edificios, puentes, equipos, estructuras para plantas industriales y elementos estructurales (vigas, columnas, etc.).",
+      "imagen": "images/VIGAS_H_e_I.jpg",
+      "fondoimagen": "images/VIGAS_H_e_I.jpg",
+      "pdf": "pdf/VIGAS_H_e_I.pdf"
+
+    }, 
+"CANALES_U_y_C": {
+      "seccion":"VIGAS Y PERFILES",
+      "titulo": "CANALES U y C",
+      "categoria": "VIGAS Y PERFILES",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Los canales U son perfiles de acero laminados en caliente que tienen una sección transversal en forma de U. Los canales C son perfiles estructurales en forma de canaleta o polín de acero negro. Los canales “C” son un producto tradicional de los sistemas constructivos, su diseño permite la fabricación de estructuras para soporte de cargas moderadas y luces cortas, Son un elemento constructivo liviano y fácil de instalar.",
+      "usos": "USOS: ",
+      "descripcion2": "Los canales se utilizan en el sector industrial, el comercio y la construcción, Se utilizan en construcciones ensambladas mediante soldadura de acero a otras piezas de acero, Se aplican en la fabricación de cercos, estructuras metálicas, portones, rejas, soportes, viguetas, entre otros.",
+      "imagen": "images/CANALES_U_y_C.jpg",
+      "fondoimagen": "images/CANALES_U_y_C.jpg",
+      "pdf": "pdf/CANALES_U_y_C.pdf"
+
+    }, 
+
+    "ANGULOS": {
+      "seccion":"VIGAS Y PERFILES",
+      "titulo": "ÁNGULOS",
+      "categoria": "VIGAS Y PERFILES",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Son perfiles estructurales que se utilizan en la construcción y la ingeniería para proporcionar soporte y estabilidad a las estructuras. Están formados por dos alas que se unen en un ángulo recto, lo que les da una forma de “L”. Son muy resistentes y pueden soportar grandes cargas y esfuerzos, son resistentes a la corrosión y el desgaste. Pueden ser fácilmente soldados y moldeados para adaptarse a diferentes aplicaciones.",
+      "usos": "USOS: ",
+      "descripcion2": "Para la fabricación de estructuras de acero en plantas industriales, almacenes, techados de grandes luces, industrial naval, carrocerías, torres de transmisión. También se pueden utilizar para la fabricación de puertas, ventanas, rejas, etc.",
+      "imagen": "images/ANGULOS.jpg",
+      "fondoimagen": "images/ANGULOS.jpg",
+      "pdf": "pdf/ANGULOS.pdf"
+
+    },
+    "PLATINAS": {
+      "seccion":"VIGAS Y PERFILES",
+      "titulo": "PLATINAS",
+      "categoria": "VIGAS Y PERFILES",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las platinas de acero son perfiles planos y rectangulares de acero estructural, fabricados mediante procesos de laminación y corte, que se caracterizan por tener una anchura y grosor específicos, y se utilizan en una amplia variedad de aplicaciones estructurales, mecánicas y construcción, para proporcionar soporte, estabilidad y resistencia a la tensión y al esfuerzo, en forma de placas, laminas, chapas o planchas que pueden ser soldadas, atornilladas o unidad mediante otros métodos para formar estructuras más complejas.",
+      "usos": "USOS: ",
+      "descripcion2": "Tienen una amplia variedad de aplicaciones en diferentes industrias y sectores; pueden ser usadas en construcción de edificios, puentes, viaductos, fabricación de máquinas, componentes automóviles, equipos de construcción, maquinaria agrícola, revestimientos, pisos, techos, ventanas, tanques y contenedores, conductos, tuberías, etc",
+      "imagen": "images/PLATINAS.jpg",
+      "fondoimagen": "images/PLATINAS.jpg",
+      "pdf": "pdf/PLATINAS.pdf"
+
+    },
+    "BARRAS": {
+      "seccion":"VIGAS Y PERFILES",
+      "titulo": "BARRAS",
+      "categoria": "VIGAS Y PERFILES",
+    "caracteristica": "DEFINICIÓN: ",
+      "descripcion": "Las barras de acero son perfiles largos de acero estructural, fabricados mediante procesos de laminación y corte, que se caracterizan por tener una sección transversal, y se utilizan en una amplia variedad de aplicaciones estructurales, mecánicas y de construcción, para proporcionar, soporte, estabilidad y resistencia a la tensión y al esfuerzo.",
+      "usos": "USOS: ",
+      "descripcion2": "En construcción de edificios y estructuras, puentes, viaductos, maquinarias, equipos industriales, automóviles, camiones, equipos de construcción, minería, etc.",
+      "imagen": "images/BARRAS.jpg",
+      "fondoimagen": "images/BARRAS.jpg",
+      "pdf": "pdf/BARRAS.pdf"
+
+    },
+
+    "PLANCHAS": {
+      "seccion":"ACERO INOXIDABLE",
+      "titulo": "PLANCHAS",
+      "categoria": "ACERO INOXIDABLE",  
+        "caracteristica": "DEFINICIÓN:",
+        "descripcion": "Son láminas planas y rectangulares de acero inoxidable, un material resistente a la corrosión y con propiedades mecánicas excelentes en resistencia a la corrosión, facilidad de limpieza, resistentes al calor y buena estética. Se fabrican mediante proceso de laminación, disponible en presentación de acero inoxidable y en largos estándar de 1220 x 2440mm, otras longitudes se pueden trabajar bajo pedido especial. Tenemos planchas de acero Inoxidable en calidades 304, 310S, 316, 321 y 430.",      
+        "usos": "USOS:",
+        "descripcion2": "Ofrece múltiples en las diferentes industrias como la alimentaria para equipos de procesamiento y superficies de trabajo, construcción para fachadas, barandillas, etc, industria automotriz para sistemas de escape, tanques de combustible, arquitectura, industria naval, farmacéutica y más.",      
+      "imagen": "images/PLANCHAS.jpg",
+      "fondoimagen": "images/PLANCHAS.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    },
+    "TUBOS": {
+      "seccion":"ACERO INOXIDABLE",
+      "titulo": "TUBOS",
+      "categoria": "ACERO INOXIDABLE",  
+        "caracteristica": "DEFINICIÓN:",
+        "descripcion": "Los tubos son estructuras cilíndricas huecas fabricadas con aleaciones de acero inoxidable, conocidas por su alta resistencia a la corrosión, propiedades mecánicas y su facilidad de limpieza. Diseñados para soportar condiciones extremas de temperatura, presión y corrosión, se caracteriza por su durabilidad, resistencia y estética.",      
+        "usos": "USOS:",
+        "descripcion2": "Su alta resistencia a la corrosión y otros daños superficiales, así como a las altas temperaturas, lo hace idóneo para transportar agua, gases y desechos líquidos a través de complejos industriales de cualquier tipo, partes internas del vehículo, líneas de agua, sillas, mesas, estanterías y otros sistemas de almacenamiento.",      
+      "imagen": "images/TUBOS.jpg",
+      "fondoimagen": "images/TUBOS.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    }, 
+    "BARRAS_Y_PERFILES": {
+      "seccion":"ACERO INOXIDABLE",
+      "titulo": "BARRAS Y PERFILES",
+      "categoria": "ACERO INOXIDABLE",  
+        "caracteristica": "DEFINICIÓN:", 
+        "descripcion": "Son productos laminados en forma de barras, ángulos, canales, tubos y otras formas geométricas, fabricados con aleaciones de acero inoxidable. Estos productos están diseñados para ofrecer resistencia a la corrosión propiedades mecánicas excelentes y facilidad de limpieza, lo que nos hace ideales para aplicaciones en diversas industrias.",      
+        "usos": "USOS:",
+        "descripcion2": "Se utiliza en la industria química, petroquímica, en la construcción de puentes y estructuras y en la fabricación de tuberías para la industria del petróleo y gas, industria automotriz en componentes de vehículos como en ejes, suspensiones, en farmacéutica como equipo de procesamiento de medicamentos, utensilios, y más.",      
+      "imagen": "images/BARRAS_Y_PERFILES.jpg",
+      "fondoimagen": "images/BARRAS_Y_PERFILES.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    },  
+
+    "COBRE": {
+      "seccion":"OTROS METALES",
+      "titulo": "COBRE",
+      "categoria": "OTROS METALES",  
+        "caracteristica": "DEFINICIÓN:",
+        "descripcion": "Excelente conductividad eléctrica y térmica, buena resistencia a la corrosión, atractivo color y fácil conformado, por lo que son muy numerosas sus aplicaciones. Es un metal comercialmente puro ya que por sí solo posee buenas características.",            
+      "imagen": "images/COBRE.jpg",
+      "fondoimagen": "images/COBRE.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    },
+    "BRONCE": {
+      "seccion":"OTROS METALES",
+      "titulo": "BRONCE",
+      "categoria": "OTROS METALES",  
+        "caracteristica": "DEFINICIÓN:",
+        "descripcion": "El bronce como aleación metálica de estaño en una proporción del 3% al 20% y cobre como base, es un material ampliamente empleado en diversos productos que van desde utensilios, herramientas, joyería, obras de arte, trofeos, instrumentos musicales, medallas y artesanías. Su amplia utilización para la fabricación de estos productos se debe a sus propiedades. Los productos de bronce tienen una amplia durabilidad ya que no se oxidan bajo la superficie. Son altamente resistentes a la corrosión, inclusive al mar y viento marino.",        
+      "imagen": "images/BRONCE.jpg",
+      "fondoimagen": "images/BRONCE.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    },  
+     "ALUMINIO": {
+      "seccion":"OTROS METALES",
+      "titulo": "ALUMINIO",
+      "categoria": "OTROS METALES",  
+        "caracteristica": "DEFINICIÓN:",
+        "descripcion": "Están compuestas por una aleación de aluminio que se caracteriza por una mayor concentración de manganeso brindando mayor resistencia mecánica, buena resistencia a la corrosión y buena conformación en frío. Es usado para recipientes a presión, para almacenamiento de alimentos, tanques para aceite y gasolina.",      
+      "imagen": "images/ALUMINIO.jpg",
+      "fondoimagen": "images/ALUMINIO.jpg",
+      "pdf": "pdf/FT_INOXIDABLES.pdf"
+
+    }
+
+
+  }
+  
