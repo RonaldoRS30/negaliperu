@@ -3755,12 +3755,12 @@
       }
     }
   </style>
-  <link rel="icon" href="https://metalcamingenieros.com/wp-content/uploads/2024/09/favicon-150x150.png" sizes="32x32" />
-  <link rel="icon" href="https://metalcamingenieros.com/wp-content/uploads/2024/09/favicon-270x270.png"
+  <link rel="icon" href="images/negali_logo_actualizado.png" sizes="32x32" />
+  <link rel="icon" href="images/negali_logo_actualizado.png"
     sizes="192x192" />
-  <link rel="apple-touch-icon" href="https://metalcamingenieros.com/wp-content/uploads/2024/09/favicon-270x270.png" />
+  <link rel="apple-touch-icon" href="images/negali_logo_actualizado.png" />
   <meta name="msapplication-TileImage"
-    content="https://metalcamingenieros.com/wp-content/uploads/2024/09/favicon-270x270.png" />
+    content="images/negali_logo_actualizado.png" />
   <style id="wp-custom-css">
     .cabez-mo {
       position: absolute;
@@ -3795,7 +3795,7 @@
   <a class="skip-link screen-reader-text" href="#content" role="link" title="Ir al contenido">
     Ir al contenido</a>
   <div class="hfeed site" id="page">
-    <header class="ast-custom-header" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+     <header class="ast-custom-header" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
       <div class="astra-advanced-hook-17 ">
         <div data-elementor-type="wp-post" data-elementor-id="17" class="elementor elementor-17">
           <div class="elementor-element elementor-element-a3e2884 cabez-mo e-flex e-con-boxed e-con e-parent"
@@ -3811,7 +3811,7 @@
                   <div class="elementor-widget-container">
                     <div class="elementor-jet-logo jet-blocks">
                      <div class="jet-logo jet-logo-type-image jet-logo-display-block">
-                      <a href="https://metalcamingenieros.com/" class="jet-logo__link">
+                      <a href="https://negaliperu.com/" class="jet-logo__link">
                         <img
                           src="images/negali_logo.svg"
                           class="jet-logo__img"
@@ -3922,7 +3922,7 @@
                             <ul class="jet-menu jet-menu--animation-type-fade jet-menu--roll-up">
                               <li id="jet-menu-item-13"
                                 class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-menu-item-home jet-current-menu-item jet-page_item jet-page-item-10 jet-current_page_item jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-13">
-                                <a href="https://metalcamingenieros.com/" class="top-level-link menu-link">
+                                <a href="index.html" class="top-level-link menu-link">
                                   <div class="jet-menu-item-wrapper">
                                     <div class="jet-menu-title">Inicio</div>
                                   </div>
@@ -3936,7 +3936,7 @@
                                   </div>
                                 </a>
                               </li>
-                               <li id="jet-menu-item-743"
+                                <li id="jet-menu-item-743"
                                 class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-743">
                                 <a href="services.html" class="top-level-link menu-link">
                                   <div class="jet-menu-item-wrapper">
@@ -3944,19 +3944,74 @@
                                   </div>
                                 </a>
                               </li>
-                              <li id="jet-menu-item-1108"
-                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1108">
-                                <a href="https://metalcamingenieros.com/contacto/" class="top-level-link menu-link">
-                                  <div class="jet-menu-item-wrapper">
-                                    <div class="jet-menu-title">Contacto</div>
-                                  </div>
-                                </a>
-                              </li>
+                         <li id="jet-menu-item-1108" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1108">
+                    <a href="productos.html" class="top-level-link menu-link">
+                      <div class="jet-menu-item-wrapper">
+                        <div class="jet-menu-title">Productos</div>
+                      </div>
+                    </a>
+                    <!-- Contenedor del submenú donde se cargará el archivo -->
+                    <div id="submenu-productos" class="submenu" style="display: none;">
+                      <!-- El contenido se cargará aquí -->
+                    </div>
+                  </li>
+                  <style>
+                    .submenu {
+  position: absolute;
+  top: 100%;  /* Coloca el submenú justo debajo del menú principal */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 200px;
+  display: none; /* Inicialmente oculto */
+  z-index: 10;
+}
+
+.submenu ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.submenu ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px;
+}
+
+.submenu ul li a:hover {
+  background-color: #f1f1f1;
+}
+
+                    </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const productosMenuItem = document.querySelector('#jet-menu-item-1108'); // Selecciona el elemento "Productos"
+    const submenuProductos = document.getElementById('submenu-productos'); // Contenedor del submenú
+
+    productosMenuItem.addEventListener('mouseenter', function() {
+      // Cargar dinámicamente el contenido de 'menuproductos.html'
+      fetch('menuproductos.html')
+        .then(response => response.text())
+        .then(data => {
+          submenuProductos.innerHTML = data;  // Inyecta el contenido del archivo HTML en el submenú
+          submenuProductos.style.display = 'block';  // Muestra el submenú
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    });
+
+    // Ocultar el submenú cuando el mouse sale del área del menú
+    productosMenuItem.addEventListener('mouseleave', function() {
+      submenuProductos.style.display = 'none';  // Oculta el submenú
+    });
+  });
+</script>
+
                               <li id="jet-menu-item-1174"
                                 class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1174">
-                                <a href="https://metalcamingenieros.com/proveedores/" class="top-level-link menu-link">
+                                <a href="contact.html" class="top-level-link menu-link">
                                   <div class="jet-menu-item-wrapper">
-                                    <div class="jet-menu-title">Proveedores</div>
+                                    <div class="jet-menu-title">Contacto</div>
                                   </div>
                                 </a>
                               </li>
