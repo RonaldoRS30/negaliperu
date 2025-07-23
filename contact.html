@@ -4456,156 +4456,287 @@
     </header>
     <div class="astra-advanced-hook-661 ">
       <div data-elementor-type="wp-post" data-elementor-id="661" class="elementor elementor-661">
-        <div class="elementor-element elementor-element-13b950d e-flex e-con-boxed e-con e-parent" data-id="13b950d"
-          data-element_type="container"
-          data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-          <div class="e-con-inner"></div>
+ 
         </div>
-      </div>
     </div> 
 
 <section id="contact-section" class="contact-section">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="section-header">
+          <br><br><br> <br><br><br>
+            <h2>Contáctenos</h2>
+            <p>Estamos listos para atender sus consultas y requerimientos</p>
+        </div>
+        
+        <div class="contact-cards-container">
             <!-- Dirección -->
-            <div class="col-lg-3 col-md-4 col-sm-6" id="direccion-panel">
-                <div class="contact-box">
-                    <div class="icon">
-                        <span class="icon-map-o"></span>
-                    </div>
-                    <p class="title">Dirección:</p>
-                    <p class="content">LIMA - LURIGANCHO CHOSICA</p>
+            <div class="contact-card" id="direccion-panel">
+                <div class="card-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Dirección</h3>
+                    <p class="card-text">Lima - Lurigancho Chosica</p>
+                    <a href="#map" class="card-action">
+                        <i class="fas fa-map"></i> Ver mapa
+                    </a>
                 </div>
             </div>
 
             <!-- Teléfono -->
-            <div class="col-lg-3 col-md-4 col-sm-6" id="telefono-panel">
-                <div class="contact-box">
-                    <div class="icon">
-                        <span class="icon-mobile-phone"></span>
-                    </div>
-                    <p class="title">Teléfono:</p>
-                    <p class="content">
-                        <a href="https://api.whatsapp.com/send/?phone=51926531258&text&type=phone_number&app_absent=0" target="_blank">+51 926 531 258</a>
+            <div class="contact-card" id="telefono-panel">
+                <div class="card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Teléfono</h3>
+                    <p class="card-text">
+                        <a href="tel:+51926531258">+51 926 531 258</a>
                     </p>
+                    <a href="https://api.whatsapp.com/send/?phone=51926531258" 
+                       target="_blank" 
+                       class="card-action whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
             </div>
 
             <!-- Email -->
-            <div class="col-lg-3 col-md-4 col-sm-6" id="email-panel">
-                <div class="contact-box">
-                    <div class="icon">
-                        <span class="icon-envelope-o"></span>
-                    </div>
-                    <p class="title">Email:</p>
-                    <p class="content">
+            <div class="contact-card" id="email-panel">
+                <div class="card-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Email</h3>
+                    <p class="card-text">
                         <a href="mailto:ventas@aceroslareserva.com">ventas@aceroslareserva.com</a>
                     </p>
-                </div>
-            </div>
-             <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div id="map" style="height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <!-- Aquí se insertará el iframe del mapa -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1694457961785!2d-76.867167!3d-12.1005498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c0674f9fcfb9%3A0x1e25b113c8ee9241!2sMetalcam%20Ingenieros%20S.A.C.!5e0!3m2!1ses-419!2spe!4v1725903698112!5m2!1ses-419!2spe"
-                        width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="mailto:ventas@aceroslareserva.com" class="card-action email">
+                        <i class="fas fa-paper-plane"></i> Enviar email
+                    </a>
                 </div>
             </div>
         </div>
+        
+        <div class="map-container">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1694457961785!2d-76.867167!3d-12.1005498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c0674f9fcfb9%3A0x1e25b113c8ee9241!2sMetalcam%20Ingenieros%20S.A.C.!5e0!3m2!1ses-419!2spe!4v1725903698112!5m2!1ses-419!2spe"
+                    width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
+    /* Importar fuentes */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+    
+    /* Variables de color */
+    :root {
+        --primary-color: #e4c134;
+        --secondary-color: #003366;
+        --accent-color: #ffd900;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --text-color: #333;
+        --text-light: #6c757d;
+        --whatsapp-color: #25D366;
+        --email-color: #EA4335;
+    }
+    
     /* Estilos generales */
-  .contact-section {
-    background: linear-gradient(135deg, #021a4a 0%, rgb(33, 51, 116) 100%); /* Degradado de azul a azul más claro */
-    padding: 80px 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-
-    .contact-box {
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 12px;
-        box-shadow: 0 8px 14px rgba(0, 0, 0, 0.08);
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #e3e3e3;
-        margin-bottom: 20px;
+    .contact-section {
+        background: linear-gradient(rgba(0, 44, 95, 0.9), rgba(0, 44, 95, 0.9)), 
+                    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
     }
-
-    .contact-box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        border-color: #3498db; /* Resalta el borde en hover */
-    }
-
-    .icon {
-        font-size: 45px;
-        color: #3498db; /* Azul */
-        margin-bottom: 20px;
-    }
-
-    .title {
-        font-size: 20px;
-        font-weight: bold;
-        color: #2c3e50;
-        margin-bottom: 15px;
-    }
-
-    .content {
-        font-size: 16px;
-        color: #7f8c8d;
-        margin-bottom: 0;
-    }
-
-    .content a {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .content a:hover {
-        color: #2980b9;
-        text-decoration: underline;
-    }
-
-    /* Estilo de los iconos */
-    .icon-map-o, .icon-mobile-phone, .icon-envelope-o {
-        font-size: 50px;
-        color: #3498db; /* Azul */
-    }
-
-    /* Responsividad */
-    @media (max-width: 768px) {
-        .col-lg-3, .col-md-4, .col-sm-6 {
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .contact-box {
-            padding: 25px;
-        }
-
-        .title {
-            font-size: 18px;
-        }
-
-        .content {
-            font-size: 14px;
-        }
-    }
-
-    /* Fondo suave y bordes redondeados */
+    
     .container {
         max-width: 1200px;
         margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* Contenedor de cards */
+    .contact-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    
+    /* Estilo de las cards */
+    .contact-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-icon {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .contact-card:hover .card-icon {
+        background: linear-gradient(135deg, var(--accent-color), #ff8c00);
+    }
+    
+    .card-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--dark-color);
+    }
+    
+    .card-text {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 15px;
+        flex-grow: 1;
+    }
+    
+    .card-text a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .card-text a:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+    
+    .card-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 15px;
+        border-radius: 6px;
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.3s;
+        margin-top: auto;
+    }
+    
+    .card-action i {
+        margin-right: 8px;
+    }
+    
+    .card-action.whatsapp {
+        background: var(--whatsapp-color);
+    }
+    
+    .card-action.email {
+        background: var(--email-color);
+    }
+    
+    .card-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Mapa */
+    .map-container {
+        margin-top: 30px;
+    }
+    
+    #map {
+        height: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        border: 4px solid white;
+    }
+    
+    /* Responsividad */
+    @media (min-width: 992px) {
+        .contact-cards-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .contact-card {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-header h2 {
+            font-size: 1.8rem;
+        }
+        
+        .contact-section {
+            padding: 50px 15px;
+        }
+        
+        .contact-cards-container {
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .section-header h2 {
+            font-size: 1.6rem;
+        }
+        
+        .section-header p {
+            font-size: 0.9rem;
+        }
+        
+        .contact-cards-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        #map {
+            height: 300px;
+        }
     }
 </style>
 
@@ -4671,97 +4802,270 @@
                 </div>
               </div>
             </div>
-            <div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
-              data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-              <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-                data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                  <style>
-                    /*! elementor - v3.23.0 - 05-08-2024 */
-                    .elementor-heading-title {
-                      padding: 0;
-                      margin: 0;
-                      line-height: 1
-                    }
+              <div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
+            data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                      color: inherit;
-                      font-size: inherit;
-                      line-height: inherit
-                    }
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                      font-size: 15px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                      font-size: 19px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                      font-size: 29px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                      font-size: 39px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                      font-size: 59px
-                    }
-                  </style>
-                  <h2 class="elementor-heading-title elementor-size-default">Contáctenos:</h2>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
-                <div class="elementor-widget-container">
-                  <link data-optimized="1" rel="stylesheet"
-                    href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
-                  <ul class="elementor-icon-list-items">
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
-                    </li>
-                  
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">991 857 700</span>
-                    </li>
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
-                    </li>
-                   
-                  </ul>
-                </div>
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Poppins', sans-serif;">Contáctenos:</h2>
               </div>
             </div>
-            <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
+
+
+            <div
+              class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+              data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
+              <div class="elementor-widget-container">
+                <link data-optimized="1" rel="stylesheet"
+                  href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
+                <ul class="elementor-icon-list-items">
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
+                  </li>
+
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">926 531 258</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="index.html" class="elementor-heading-title elementor-size-default">
+                  Inicio
+                </a>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="about.html" class="elementor-heading-title elementor-size-default">
+                  Nosotros
+                </a>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                 <a href="services.html"  class="elementor-heading-title elementor-size-default">
+                   Servicios
+                </a>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="contact.html"  class="elementor-heading-title elementor-size-default">
+                   Contactanos
+                </a>  
+             </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
               data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
               <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
                 data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">Más Información:</h2>
+                  <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Poppins', sans-serif;">Nuestros Servicios:</h2>
                 </div>
               </div>
               <div
@@ -4777,7 +5081,7 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Fabricaciones</span>
+                      <span class="elementor-icon-list-text">Venta de planchas, tubos y perfiles</span>
                     </li>
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
@@ -4787,9 +5091,9 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Diseño e Ingeniería</span>
+                      <span class="elementor-icon-list-text">Cortes y dimensiones a medida</span>
                     </li>
-                  
+
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
                         <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
@@ -4798,9 +5102,9 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Mantenimineto</span>
+                      <span class="elementor-icon-list-text">Asesoría técnica especializada</span>
                     </li>
-              
+
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
                         <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
@@ -4809,7 +5113,43 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Montajes</span>
+                      <span class="elementor-icon-list-text">Envíos a Lima y provincias</span>
+                    </li><br>
+                <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
+                data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                  <h2 class="elementor-heading-title elementor-size-default">Porque Elegirnos:</h2>
+                </div>
+              </div> <br>
+                  <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Stock permanente</span>
+                    </li>
+                      <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Atención rápida y personalizada</span>
+                    </li>
+                      <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Productos con certificación internacional</span>
                     </li>
                   </ul>
                 </div>

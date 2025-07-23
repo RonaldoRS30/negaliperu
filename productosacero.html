@@ -4462,208 +4462,377 @@
  
 </head>
 <body>
-     <section class="hero-wrap hero-wrap-2 js-fullheight" id="hero-section">
-    <div class="overlay" id="overlay"></div>
-    <div class="container" id="hero-container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-            <div class="col-md-12 ftco-animate pb-5" id="hero-text-container">
-                <p class="breadcrumbs" id="breadcrumbs"></p>
-                <h2 class="bread"  id ="seccion-title" ></h2>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
-
-    /* Estilo único para la sección hero */
-  #hero-section {
-    background-image: url('images/ALUMINIO.jpg'); /* Aquí pones la ruta de tu imagen */
-    background-size: cover; /* Para que la imagen cubra todo el área */
-    background-position: center center; /* Para centrar la imagen */
-    min-height: 60vh; /* Ajuste de altura mínima */
-    position: relative; 
-}
-
-    #overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    #hero-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        padding: 20px;
-    }
-
-    #breadcrumbs {
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 15px;
-    }
-
-    #breadcrumbs a {
-        color: #ffcd00;
-        text-decoration: none;
-    }
-
-    #seccion-title {
-      background-color: #fdfdfd;
-        font-size: 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 768px) {
-        #seccion-title {
-            font-size: 36px;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Profesionales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Importar fuentes */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        /* Variables de color */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #003366;
+            --accent-color: #d9a003;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --text-color: #333;
+            --text-light: #6c757d;
         }
 
-        #breadcrumbs {
-            font-size: 14px;
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
         }
-    }
 
-</style>
+        /* Hero Section - Versión optimizada */
+        .hero-wrap {
+            position: relative;
+            height: 65vh;
+            min-height: 500px;
+            max-height: 700px;
+            background: linear-gradient(rgba(0, 44, 95, 0.85), rgba(0, 44, 95, 0.85)), 
+                        url('images/ALUMINIO.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
 
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
 
-<section class="ftco-section ftco-about bg-light" id="about-section">
-    <div class="container" id="about-container">
-        <div class="row no-gutters align-items-center">
-            <!-- Columna de texto (izquierda) -->
-            <div class="col-md-6 wrap-about ftco-animate fadeInRight" id="about-text-container">
-                <div class="heading-section pl-md-5" id="about-heading">
-                    <span class="subheading" id="categoria" style="color: #0d47a1;"></span>
-                    <h2 class="mb-4" id="titulo" style="color: #212121;"></h2>
-                    <div class="info-bloque">
-                        <p class="etiqueta" id="caracteristica" style="color: #ff5722;"></p>
-                    </div>
-                    <p id="descripcion" style="color: #212121;"></p>
-                    <div class="info-bloque">
-                        <p class="etiqueta" id="usos" style="color: #ff5722;"></p>
-                    </div>
-                    <p id="descripcion2" style="color: #212121;"></p>
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 0 20px;
+        }
 
-                    <div class="btn-container" id="btn-container">
-                        <a id="pdf" href="#" target="_blank" class="pdf-button">
-                            <img src="images/pdf.png" alt="PDF" class="pdf-icon" id="pdf-icon">
-                            <span id="pdf-text">Ficha técnica</span>
-                        </a>
-                    </div>
+        .slider-text {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-bottom: 60px;
+        }
+
+        .breadcrumbs {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumbs a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .breadcrumbs a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .bread {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            background: none;
+            padding: 0;
+        }
+
+        /* About Section - Versión optimizada */
+        .ftco-about {
+            padding: 80px 0;
+            background: white;
+            position: relative;
+        }
+
+        .wrap-about {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heading-section {
+            margin-bottom: 30px;
+        }
+
+        .subheading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .mb-4 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .info-bloque {
+            margin-bottom: 20px;
+        }
+
+        .etiqueta {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        #descripcion, #descripcion2 {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .img-2 {
+            height: 450px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+            object-fit: cover;
+        }
+
+        .img-2:hover {
+            transform: scale(1.02);
+        }
+
+        /* Botón optimizado */
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .pdf-button:hover {
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .pdf-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Responsividad mejorada */
+        @media (max-width: 992px) {
+            .hero-wrap {
+                height: 55vh;
+                min-height: 450px;
+            }
+            
+            .bread {
+                font-size: 2.2rem;
+            }
+            
+            .mb-4 {
+                font-size: 1.8rem;
+            }
+            
+            .img-2 {
+                height: 400px;
+            }
+            
+            .wrap-about {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-wrap {
+                height: 50vh;
+                min-height: 400px;
+                text-align: center;
+            }
+            
+            .slider-text {
+                align-items: center;
+                padding-bottom: 40px;
+            }
+            
+            .bread {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            
+            .wrap-about {
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+            
+            .img-2 {
+                height: 350px;
+            }
+            
+            .mb-4 {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+            
+            .subheading {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-wrap {
+                min-height: 350px;
+                height: 45vh;
+            }
+            
+            .bread {
+                font-size: 1.5rem;
+            }
+            
+            .wrap-about {
+                padding: 25px 20px;
+            }
+            
+            .mb-4 {
+                font-size: 1.4rem;
+            }
+            
+            .img-2 {
+                height: 300px;
+            }
+            
+            .pdf-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section Optimizada -->
+    <section class="hero-wrap hero-wrap-2 js-fullheight" id="hero-section">
+        <div class="overlay" id="overlay"></div>
+        <div class="container" id="hero-container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+                <div class="col-md-12 ftco-animate pb-5" id="hero-text-container">
+                 <div class="col-md-12 ftco-animate pb-5" id="hero-text-container" style="padding-left: 40px;">
+    <p class="breadcrumbs" id="breadcrumbs">
+        <span class="mr-2"><a href="index.html" style="font-family: 'Poppins', sans-serif;" ><br><br><br><br><br><br>Inicio</a></span>
+        <span class="mr-2"><i class="fas fa-chevron-right"></i></span>
+<span style="font-family: 'Poppins', sans-serif;">Productos</span>
+    </p>
+    <h2 class="bread" id="seccion-title"></h2>
+</div>
                 </div>
             </div>
-            
-            <!-- Columna de imagen (derecha) -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="img img-2 parallax-img" id="about-img" style="background-image: url('images/your-image.jpg'); background-size: cover; background-position: center; height: 100%; min-height: 400px; width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+        </div>
+    </section>
+
+    <!-- About Section Optimizada -->
+    <section class="ftco-section ftco-about bg-light" id="about-section">
+        <div class="container" id="about-container">
+            <div class="row no-gutters align-items-center">
+                <!-- Columna de texto (izquierda) -->
+                <div class="col-md-6 wrap-about ftco-animate fadeInRight" id="about-text-container">
+                    <div class="heading-section pl-md-5" id="about-heading">
+                        <span class="subheading" style="font-family: 'Poppins', sans-serif;" id="categoria">SOLUCIONES INDUSTRIALES</span>
+                        <h2 class="mb-4" id="titulo">Expertos en materiales metálicos</h2>
+                        <div class="info-bloque">
+                            <p class="etiqueta" id="caracteristica">CALIDAD GARANTIZADA</p>
+                            <p id="descripcion">Ofrecemos productos que cumplen con las principales normas internacionales ASTM, SAE y AISI, garantizando soluciones confiables y certificadas para cada proyecto industrial o de construcción.</p>
+                        </div>
+                        <div class="info-bloque">
+                            <p class="etiqueta" id="usos">ASESORÍA ESPECIALIZADA</p>
+                            <p id="descripcion2">Nuestro equipo de expertos brinda asesoría técnica personalizada para ayudarte a seleccionar los materiales más adecuados para tus necesidades específicas.</p>
+                        </div>
+
+                        <div class="btn-container" id="btn-container">
+                            <a id="pdf" href="#" target="_blank" class="pdf-button">
+                                <img src="images/pdf.png" alt="PDF" class="pdf-icon" id="pdf-icon">
+                                <span id="pdf-text">Ficha técnica</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna de imagen (derecha) -->
+             <div class="col-md-6 d-flex justify-content-center align-items-center">
+    <div class="img-container">
+        <div class="img img-2 parallax-img" id="about-img" style="background-image: url('images/your-image.jpg');"></div>
+    </div>
+</div>
+<style>
+  /* Contenedor para controlar el ancho de la imagen */
+.img-container {
+    width: 80%; /* Ajusta este valor según necesites (70%, 60%, etc) */
+    max-width: 500px; /* Máximo ancho que puede tener */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Ajusta la imagen para que ocupe todo el contenedor */
+.img-container .img-2 {
+    width: 100%;
+    height: 450px; /* Mantén la altura que tenías o ajústala */
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}</style>
             </div>
         </div>
-    </div>
-</section>
-
-<style>
-  /* Ajustes de estilo de la sección */
-  #about-section {
-      background-color: #f4f4f4;
-      padding: 80px 0;
-  }
-
-  #about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  #about-text-container {
-      padding: 40px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      height: 100%;
-  }
-
-  #about-heading {
-      margin-bottom: 25px;
-  }
-
-  .info-bloque {
-      margin-bottom: 20px;
-  }
-
-  /* Estilos del botón PDF */
-  #btn-container {
-      text-align: center;
-      margin-top: 30px;
-  }
-
-  .pdf-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 25px;
-      background-color: #e53935;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .pdf-button:hover {
-      background-color: #c62828;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-      transform: translateY(-2px);
-  }
-
-  .pdf-icon {
-      width: 24px;
-      height: 24px;
-  }
-
-  #pdf-text {
-      font-size: 1.1rem;
-  }
-
-  /* Ajuste de la imagen */
-  #about-img {
-      background-size: cover;
-      background-position: center;
-      object-fit: cover;
-      border-radius: 8px;
-  }
-
-  @media (max-width: 768px) {
-      #about-text-container {
-          text-align: center;
-          margin-bottom: 30px;
-          padding: 30px 20px;
-      }
-
-      #about-img {
-          min-height: 300px;
-      }
-
-      #about-heading h2 {
-          font-size: 2rem;
-      }
-
-      .row {
-          flex-direction: column;
-      }
-  }
-</style>
-
-
+    </section>
+</body>
+</html>
 
   
 <script>
@@ -4760,97 +4929,270 @@
                 </div>
               </div>
             </div>
-            <div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
-              data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-              <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-                data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                  <style>
-                    /*! elementor - v3.23.0 - 05-08-2024 */
-                    .elementor-heading-title {
-                      padding: 0;
-                      margin: 0;
-                      line-height: 1
-                    }
+              <div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
+            data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                      color: inherit;
-                      font-size: inherit;
-                      line-height: inherit
-                    }
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                      font-size: 15px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                      font-size: 19px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                      font-size: 29px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                      font-size: 39px
-                    }
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
 
-                    .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                      font-size: 59px
-                    }
-                  </style>
-                  <h2 class="elementor-heading-title elementor-size-default">Contáctenos:</h2>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
-                <div class="elementor-widget-container">
-                  <link data-optimized="1" rel="stylesheet"
-                    href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
-                  <ul class="elementor-icon-list-items">
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
-                    </li>
-                  
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">991 857 700</span>
-                    </li>
-                    <li class="elementor-icon-list-item">
-                      <span class="elementor-icon-list-icon">
-                        <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
-                          </path>
-                        </svg> </span>
-                      <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
-                    </li>
-                   
-                  </ul>
-                </div>
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <h2 class="elementor-heading-title elementor-size-default">Contáctenos:</h2>
               </div>
             </div>
-            <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
+
+
+            <div
+              class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+              data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
+              <div class="elementor-widget-container">
+                <link data-optimized="1" rel="stylesheet"
+                  href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
+                <ul class="elementor-icon-list-items">
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
+                  </li>
+
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">926 531 258</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                        </path>
+                      </svg> </span>
+                    <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="index.html" class="elementor-heading-title elementor-size-default">
+                  Inicio
+                </a>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="about.html" class="elementor-heading-title elementor-size-default">
+                  Nosotros
+                </a>
+              </div>
+            </div>
+
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                 <a href="services.html"  class="elementor-heading-title elementor-size-default">
+                   Servicios
+                </a>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.23.0 - 05-08-2024 */
+                  .elementor-heading-title {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                    color: inherit;
+                    font-size: inherit;
+                    line-height: inherit
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                    font-size: 15px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                    font-size: 19px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                    font-size: 29px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                    font-size: 39px
+                  }
+
+                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                    font-size: 59px
+                  }
+                </style>
+                <a href="contact.html"  class="elementor-heading-title elementor-size-default">
+                   Contactanos
+                </a>  
+             </div>
+            </div>
+          </div>
+           <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
               data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
               <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
                 data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">Más Información:</h2>
+                  <h2 class="elementor-heading-title elementor-size-default">Nuestros Servicios:</h2>
                 </div>
               </div>
               <div
@@ -4866,7 +5208,7 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Fabricaciones</span>
+                      <span class="elementor-icon-list-text">Venta de planchas, tubos y perfiles</span>
                     </li>
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
@@ -4876,9 +5218,9 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Diseño e Ingeniería</span>
+                      <span class="elementor-icon-list-text">Cortes y dimensiones a medida</span>
                     </li>
-                  
+
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
                         <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
@@ -4887,9 +5229,9 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Mantenimineto</span>
+                      <span class="elementor-icon-list-text">Asesoría técnica especializada</span>
                     </li>
-              
+
                     <li class="elementor-icon-list-item">
                       <span class="elementor-icon-list-icon">
                         <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
@@ -4898,7 +5240,43 @@
                             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                           </path>
                         </svg> </span>
-                      <span class="elementor-icon-list-text">Montajes</span>
+                      <span class="elementor-icon-list-text">Envíos a Lima y provincias</span>
+                    </li><br>
+                <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
+                data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                  <h2 class="elementor-heading-title elementor-size-default">Porque Elegirnos:</h2>
+                </div>
+              </div> <br>
+                  <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Stock permanente</span>
+                    </li>
+                      <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Atención rápida y personalizada</span>
+                    </li>
+                      <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Productos con certificación internacional</span>
                     </li>
                   </ul>
                 </div>
