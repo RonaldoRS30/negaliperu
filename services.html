@@ -3863,7 +3863,7 @@
                         <h3 class="elementor-icon-box-title" style="color: #142262;">
                           <span>Ubicación</span>
                         </h3>
-                        <p class="elementor-icon-box-description" style="color: #142262;">Lurigancho-Chosica</p>
+                        <p class="elementor-icon-box-description" style="color: #142262;">Lurigancho - Chosica</p>
                       </div>
                     </div>
                   </div>
@@ -3920,33 +3920,34 @@
                                   </div>
                                 </a>
                               </li>
-                              <li id="jet-menu-item-743"
-                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-743">
-                                <a href="about.html" class="top-level-link menu-link">
-                                  <div class="jet-menu-item-wrapper">
-                                    <div class="jet-menu-title">Nosotros</div>
-                                  </div>
+                              <li id="jet-menu-item-tubos" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item">
+                                <a href="tubos.html" class="top-level-link menu-link">
+                                    <div class="jet-menu-item-wrapper">
+                                        <div class="jet-menu-title">Tubos</div>
+                                    </div>
                                 </a>
-                              </li>
-                              <li id="jet-menu-item-743"
-                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-743">
-                                <a href="services.html" class="top-level-link menu-link">
-                                  <div class="jet-menu-item-wrapper">
-                                    <div class="jet-menu-title">SERVICIOS</div>
-                                  </div>
+                                <!-- Contenedor del submenú -->
+                                <div id="submenu-tubos" class="submenu" style="display: none;"></div>
+                            </li>
+                            <li id="jet-menu-item-planchas" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item">
+                                <a href="planchas.html" class="top-level-link menu-link">
+                                    <div class="jet-menu-item-wrapper">
+                                        <div class="jet-menu-title">Planchas</div>
+                                    </div>
                                 </a>
-                              </li>
-                              <li id="jet-menu-item-1108"
-                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1108">
-                                <a class="top-level-link menu-link">
-                                  <div class="jet-menu-item-wrapper">
-                                    <div class="jet-menu-title">Productos</div>
-                                  </div>
+                                <!-- Contenedor del submenú -->
+                                <div id="submenu-planchas" class="submenu" style="display: none;"></div>
+                            </li>
+
+                            <li id="jet-menu-item-perfiles" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item">
+                                <a href="perfiles.html" class="top-level-link menu-link">
+                                    <div class="jet-menu-item-wrapper">
+                                        <div class="jet-menu-title">Perfiles</div>
+                                    </div>
                                 </a>
-                                <!-- Contenedor del submenú donde se cargará el archivo -->
-                                <div id="submenu-productos" class="submenu" style="display: none;">
-                                </div>
-                              </li>
+                                <!-- Contenedor del submenú -->
+                                <div id="submenu-perfiles" class="submenu" style="display: none;"></div>
+                            </li>
                               <style>
                                 .submenu {
                                   position: absolute;
@@ -4034,28 +4035,51 @@
 
 
                               <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                  const productosMenuItem = document.querySelector('#jet-menu-item-1108'); // Selecciona el elemento "Productos"
-                                  const submenuProductos = document.getElementById('submenu-productos'); // Contenedor del submenú
+                                          document.addEventListener('DOMContentLoaded', function () {
+                      // Configuración para Planchas
+                      const menuItemPlanchas = document.querySelector('#jet-menu-item-planchas');
+                      const submenuPlanchas = document.getElementById('submenu-planchas');
+                      
+                      // Configuración para Perfiles
+                      const menuItemPerfiles = document.querySelector('#jet-menu-item-perfiles');
+                      const submenuPerfiles = document.getElementById('submenu-perfiles');
 
-                                  productosMenuItem.addEventListener('mouseenter', function () {
-                                    // Cargar dinámicamente el contenido de 'menuproductos.html'
-                                    fetch('menuproductos.html')
-                                      .then(response => response.text())
-                                      .then(data => {
-                                        submenuProductos.innerHTML = data;  // Inyecta el contenido del archivo HTML en el submenú
-                                        submenuProductos.style.display = 'block';  // Muestra el submenú
-                                      })
-                                      .catch(error => console.error('Error al cargar el archivo:', error));
-                                  });
+                       // Configuración para Tubos
+                      const menuItemTubos = document.querySelector('#jet-menu-item-tubos');
+                      const submenuTubos = document.getElementById('submenu-tubos');
 
-                                  // Ocultar el submenú cuando el mouse sale del área del menú
-                                  productosMenuItem.addEventListener('mouseleave', function () {
-                                    submenuProductos.style.display = 'none';  // Oculta el submenú
-                                  });
-                                });
-                              </script>
-                              <li id="jet-menu-item-1174"
+                      // Función genérica para manejar hover
+                      function setupSubmenu(menuItem, submenuElement, htmlFile) {
+                          menuItem.addEventListener('mouseenter', function () {
+                              fetch(htmlFile)
+                                  .then(response => response.text())
+                                  .then(data => {
+                                      submenuElement.innerHTML = data;
+                                      submenuElement.style.display = 'block';
+                                  })
+                                  .catch(error => console.error('Error al cargar el archivo:', error));
+                          });
+
+                          menuItem.addEventListener('mouseleave', function () {
+                              submenuElement.style.display = 'none';
+                          });
+                      }
+
+                      // Aplicar a ambos menús
+                      setupSubmenu(menuItemPlanchas, submenuPlanchas, 'menuproductos_planchas.html');
+                      setupSubmenu(menuItemPerfiles, submenuPerfiles, 'menuproductos_perfiles.html');
+                      setupSubmenu(menuItemTubos, submenuTubos, 'menuproductos_tubos.html');
+
+                  });
+                              </script> 
+
+                              <script>
+                                menuItem.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    // El mismo código que para mouseenter
+});
+                                </script>
+                               <li id="jet-menu-item-1174"
                                 class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1174">
                                 <a href="catalogo.html" class="top-level-link menu-link">
                                   <div class="jet-menu-item-wrapper">
@@ -4063,7 +4087,23 @@
                                   </div>
                                 </a>
                               </li>
-                              <li id="jet-menu-item-1174"
+                                 <li id="jet-menu-item-743"
+                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-743">
+                                <a href="about.html" class="top-level-link menu-link">
+                                  <div class="jet-menu-item-wrapper">
+                                    <div class="jet-menu-title">Nosotros</div>
+                                  </div>
+                                </a>
+                              </li>
+                                 <li id="jet-menu-item-743"
+                                class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-743">
+                                <a href="services.html" class="top-level-link menu-link">
+                                  <div class="jet-menu-item-wrapper">
+                                    <div class="jet-menu-title">SERVICIOS</div>
+                                  </div>
+                                </a>
+                              </li>
+                                 <li id="jet-menu-item-1174"
                                 class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-1174">
                                 <a href="contact.html" class="top-level-link menu-link">
                                   <div class="jet-menu-item-wrapper">
@@ -4480,14 +4520,11 @@
   <div class="services-hero">
     <div class="hero-container">
       <br><br><br><br><br><br><br>
-        <h2 class="hero-subtitle" style="color: #fff;" style="font-family: 'Poppins', sans-serif;">NUESTROS SERVICIOS</h2>
-        <h1 class="hero-title"  style="color: #fff;" style="font-family: 'Poppins', sans-serif;">Contamos con amplia experiencia en el sector acero para brindar soluciones precisas, 
-          confiables y a la medida de tus necesidades.</h1>
-        <p class="hero-description" style="font-family: 'Poppins', sans-serif;">
-         Ofrecemos productos y servicios para la industria metalmecánica, construcción, 
-         minería y emprendimientos que requieren materiales de calidad. Consulta con nosotros cómo podemos
-          ayudarte a optimizar tus proyectos con entregas rápidas y asesoría especializada.
-        </p>
+      <h2 class="hero-subtitle" style="color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.9rem;">NUESTROS SERVICIOS</h2>
+<h1 class="hero-title" style="color: #fff; font-family: 'Poppins', sans-serif; font-size: 1.5rem;">Contamos con amplia experiencia en el sector acero para brindar soluciones precisas, confiables y a la medida de tus necesidades.</h1>
+<p class="hero-description" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem;">
+  Ofrecemos productos y servicios para la industria metalmecánica, construcción, minería y emprendimientos que requieren materiales de calidad. Consulta con nosotros cómo podemos ayudarte a optimizar tus proyectos con entregas rápidas y asesoría especializada.
+</p>
         <a href="https://web.whatsapp.com/send?phone=51926531258&text=%C2%A1Hola!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20brinda." 
            class="hero-button" target="_blank">
           <i class="fab fa-whatsapp"></i> Contáctanos
@@ -4849,425 +4886,268 @@
       </div>
     </div>
     <div class="astra-advanced-hook-283 ">
-      <div data-elementor-type="wp-post" data-elementor-id="283" class="elementor elementor-283">
+    <div data-elementor-type="wp-post" data-elementor-id="283" class="elementor elementor-283">
 
-        <d iv class="elementor-element elementor-element-38a9112 e-con-full e-flex e-con e-parent" data-id="38a9112"
-          data-element_type="container"
-          data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-          <div class="elementor-element elementor-element-36bb89f e-con-full e-flex e-con e-child" data-id="36bb89f"
-            data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-            <div
-              class="elementor-element elementor-element-567047a elementor-widget__width-initial elementor-widget elementor-widget-jet-logo"
-              data-id="567047a" data-element_type="widget" data-widget_type="jet-logo.default">
-              <div class="elementor-widget-container">
-                <div class="elementor-jet-logo jet-blocks">
-                  <div class="jet-logo jet-logo-type-image jet-logo-display-block">
-                    <a href="https://negaliperu.com/" class="jet-logo__link"><img
-                        src="images/negali_logo_actual-removebg-preview.png" class="jet-logo__img" alt="Metal Cam"
-                        width="300" height="96"></a>
+          <d iv class="elementor-element elementor-element-38a9112 e-con-full e-flex e-con e-parent" data-id="38a9112"
+            data-element_type="container"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+            <div class="elementor-element elementor-element-36bb89f e-con-full e-flex e-con e-child" data-id="36bb89f"
+              data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+              <div
+                class="elementor-element elementor-element-567047a elementor-widget__width-initial elementor-widget elementor-widget-jet-logo"
+                data-id="567047a" data-element_type="widget" data-widget_type="jet-logo.default">
+                <div class="elementor-widget-container">
+                  <div class="elementor-jet-logo jet-blocks">
+                    <div class="jet-logo jet-logo-type-image jet-logo-display-block">
+                      <a href="https://negaliperu.com/" class="jet-logo__link"><img
+                          src="images/negali_logo_actual-removebg-preview.png" class="jet-logo__img" alt="Metal Cam"
+                          width="300" height="96"></a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="elementor-element elementor-element-5188663 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
-              data-id="5188663" data-element_type="widget" data-widget_type="text-editor.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
-                    background-color: #69727d;
-                    color: #fff
-                  }
+              <div
+                class="elementor-element elementor-element-5188663 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
+                data-id="5188663" data-element_type="widget" data-widget_type="text-editor.default">
+                <div class="elementor-widget-container">
+                  <style>
+                    /*! elementor - v3.23.0 - 05-08-2024 */
+                    .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                      background-color: #69727d;
+                      color: #fff
+                    }
 
-                  .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
-                    color: #69727d;
-                    border: 3px solid;
-                    background-color: transparent
-                  }
+                    .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                      color: #69727d;
+                      border: 3px solid;
+                      background-color: transparent
+                    }
 
-                  .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
-                    margin-top: 8px
-                  }
+                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                      margin-top: 8px
+                    }
 
-                  .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
-                    width: 1em;
-                    height: 1em
-                  }
+                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                      width: 1em;
+                      height: 1em
+                    }
 
-                  .elementor-widget-text-editor .elementor-drop-cap {
-                    float: left;
-                    text-align: center;
-                    line-height: 5;
-                    font-size: 50px
-                  }
+                    .elementor-widget-text-editor .elementor-drop-cap {
+                      float: left;
+                      text-align: center;
+                      line-height: 5;
+                      font-size: 50px
+                    }
 
-                  .elementor-widget-text-editor .elementor-drop-cap-letter {
-                    display: inline-block
-                  }
-                </style>
-                <p>Es una empresa peruana con sólida experiencia en la comercialización de aceros y materiales metálicos
-                  de alta calidad, respaldada por años de servicio a la industria metalmecánica, de construcción y
-                  sectores industriales diversos. </p>
-              </div>
-            </div>
-          </div>
-          <div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
-            data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-heading-title {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 1
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                    color: inherit;
-                    font-size: inherit;
-                    line-height: inherit
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                    font-size: 15px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                    font-size: 19px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                    font-size: 29px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                    font-size: 39px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                    font-size: 59px
-                  }
-                </style>
-                <h2 class="elementor-heading-title elementor-size-default">Contáctenos:</h2>
-              </div>
-            </div>
-
-
-            <div
-              class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-              data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
-              <div class="elementor-widget-container">
-                <link data-optimized="1" rel="stylesheet"
-                  href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
-                <ul class="elementor-icon-list-items">
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
-                  </li>
-
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">926 531 258</span>
-                  </li>
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-
-            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-heading-title {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 1
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                    color: inherit;
-                    font-size: inherit;
-                    line-height: inherit
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                    font-size: 15px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                    font-size: 19px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                    font-size: 29px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                    font-size: 39px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                    font-size: 59px
-                  }
-                </style>
-                <a href="index.html" class="elementor-heading-title elementor-size-default">
-                  Inicio
-                </a>
-              </div>
-            </div>
-
-            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-heading-title {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 1
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                    color: inherit;
-                    font-size: inherit;
-                    line-height: inherit
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                    font-size: 15px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                    font-size: 19px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                    font-size: 29px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                    font-size: 39px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                    font-size: 59px
-                  }
-                </style>
-                <a href="about.html" class="elementor-heading-title elementor-size-default">
-                  Nosotros
-                </a>
-              </div>
-            </div>
-
-            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-heading-title {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 1
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                    color: inherit;
-                    font-size: inherit;
-                    line-height: inherit
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                    font-size: 15px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                    font-size: 19px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                    font-size: 29px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                    font-size: 39px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                    font-size: 59px
-                  }
-                </style>
-                 <a href="services.html"  class="elementor-heading-title elementor-size-default">
-                   Servicios
-                </a>
+                    .elementor-widget-text-editor .elementor-drop-cap-letter {
+                      display: inline-block
+                    }
+                  </style>
+               <p style="
+    font-size: 0.8rem;  /* Reduce el tamaño de la fuente */
+    line-height: 1.3;   /* Ajusta la altura de la línea para mayor compactación */
+    text-align: left;
+    margin: 3px 0 0 0;  /* Reduce el margen superior */
+    padding: 0 0 0 1px; /* Ajusta el padding izquierdo para un ajuste más ajustado */
+    max-width: 210px;    /* Reduce aún más el ancho máximo */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    white-space: normal;
+    word-spacing: 0.4em; /* Ajusta el espacio entre palabras */
+    letter-spacing: 0.01em; /* Ajusta el espaciado entre letras */
+    overflow-wrap: break-word;  /* Ajusta el texto y lo divide cuando sea necesario */
+    word-break: break-word;     /* Permite dividir las palabras si es necesario */
+">
+Es una empresa peruana con sólida experiencia en la comercialización de aceros y materiales metálicos de alta calidad, respaldada por años de servicio a la industria metalmecánica, de construcción y sectores industriales diversos.
+</p>
                 </div>
-            </div>
-            <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
-              data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <style>
-                  /*! elementor - v3.23.0 - 05-08-2024 */
-                  .elementor-heading-title {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 1
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                    color: inherit;
-                    font-size: inherit;
-                    line-height: inherit
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                    font-size: 15px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                    font-size: 19px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                    font-size: 29px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                    font-size: 39px
-                  }
-
-                  .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                    font-size: 59px
-                  }
-                </style>
-                <a href="contact.html"  class="elementor-heading-title elementor-size-default">
-                   Contactanos
-                </a>  
-             </div>
-            </div>
-          </div>
-
-
-          <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
-            data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-            <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
-              data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
-              <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default">Nuestros Servicios:</h2>
               </div>
             </div>
-            <div
-              class="elementor-element elementor-element-32860f7 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-              data-id="32860f7" data-element_type="widget" data-widget_type="icon-list.default">
-              <div class="elementor-widget-container">
-                <ul class="elementor-icon-list-items">
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Venta de planchas, tubos y perfiles</span>
-                  </li>
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Cortes y dimensiones a medida</span>
-                  </li>
+            
+            <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
+              data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+              <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
+                data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                  <h2 class="elementor-heading-title elementor-size-default">Nuestros Servicios:</h2>
+                </div>
+              </div>
+              <div
+                class="elementor-element elementor-element-32860f7 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                data-id="32860f7" data-element_type="widget" data-widget_type="icon-list.default">
+                <div class="elementor-widget-container">
+                  <ul class="elementor-icon-list-items">
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Venta de planchas, tubos y perfiles</span>
+                    </li>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Cortes y dimensiones a medida</span>
+                    </li>
 
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Asesoría técnica especializada</span>
-                  </li>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Asesoría técnica especializada</span>
+                    </li>
 
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Envíos a Lima y provincias</span>
-                  </li><br>
-                  <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
-                    data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                      <h2 class="elementor-heading-title elementor-size-default">Porque Elegirnos:</h2>
-                    </div>
-                  </div> <br>
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Stock permanente</span>
-                  </li>
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Atención rápida y personalizada</span>
-                  </li>
-                  <li class="elementor-icon-list-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                        </path>
-                      </svg> </span>
-                    <span class="elementor-icon-list-text">Productos con certificación internacional</span>
-                  </li>
-                </ul>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Envíos a Lima y provincias</span>
+                    </li><br>
+                    <div class="elementor-element elementor-element-df7eb24 elementor-widget elementor-widget-heading"
+                      data-id="df7eb24" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">Porqué Elegirnos:</h2>
+                      </div>
+                    </div> <br>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Stock permanente</span>
+                    </li>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Atención rápida y personalizada</span>
+                    </li>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-check" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Productos con certificación internacional</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-      </div>
+<div class="elementor-element elementor-element-86bcb7f e-con-full e-flex e-con e-child" data-id="86bcb7f"
+              data-element_type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+              <div class="elementor-element elementor-element-eaf9e08 elementor-widget elementor-widget-heading"
+                data-id="eaf9e08" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                  <style>
+                    /*! elementor - v3.23.0 - 05-08-2024 */
+                    .elementor-heading-title {
+                      padding: 0;
+                      margin: 0;
+                      line-height: 1
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                      color: inherit;
+                      font-size: inherit;
+                      line-height: inherit
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                      font-size: 15px
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                      font-size: 19px
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                      font-size: 29px
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                      font-size: 39px
+                    }
+
+                    .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                      font-size: 59px
+                    }
+                  </style>
+                  <h2 class="elementor-heading-title elementor-size-default">Contáctenos:</h2>
+                </div>
+              </div>
+
+
+              <div
+                class="elementor-element elementor-element-19904b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                data-id="19904b1" data-element_type="widget" data-widget_type="icon-list.default">
+                <div class="elementor-widget-container">
+                  <link data-optimized="1" rel="stylesheet"
+                    href="https://metalcamingenieros.com/wp-content/litespeed/css/85e54acd028f2c989c5f7951afe85132.css?ver=85132">
+                  <ul class="elementor-icon-list-items">
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">Lurigancho-Chosica</span>
+                    </li>
+
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">926 531 258</span>
+                    </li>
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                          </path>
+                        </svg> </span>
+                      <span class="elementor-icon-list-text">negali.ind@gmail.com</span>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+        </div>
     </div>
   </div>
   <div id="ast-scroll-top" tabindex="0" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both">

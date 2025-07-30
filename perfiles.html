@@ -11,7 +11,7 @@
     data-no-optimize="1">var ewww_webp_supported = !1; function check_webp_feature(A, e) { var w; e = void 0 !== e ? e : function () { }, ewww_webp_supported ? e(ewww_webp_supported) : ((w = new Image).onload = function () { ewww_webp_supported = 0 < w.width && 0 < w.height, e && e(ewww_webp_supported) }, w.onerror = function () { e && e(!1) }, w.src = "data:image/webp;base64," + { alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==" }[A]) } check_webp_feature("alpha");</script>
   <script data-cfasync="false" data-no-defer="1" data-no-minify="1"
     data-no-optimize="1">var Arrive = function (c, w) { "use strict"; if (c.MutationObserver && "undefined" != typeof HTMLElement) { var r, a = 0, u = (r = HTMLElement.prototype.matches || HTMLElement.prototype.webkitMatchesSelector || HTMLElement.prototype.mozMatchesSelector || HTMLElement.prototype.msMatchesSelector, { matchesSelector: function (e, t) { return e instanceof HTMLElement && r.call(e, t) }, addMethod: function (e, t, r) { var a = e[t]; e[t] = function () { return r.length == arguments.length ? r.apply(this, arguments) : "function" == typeof a ? a.apply(this, arguments) : void 0 } }, callCallbacks: function (e, t) { t && t.options.onceOnly && 1 == t.firedElems.length && (e = [e[0]]); for (var r, a = 0; r = e[a]; a++)r && r.callback && r.callback.call(r.elem, r.elem); t && t.options.onceOnly && 1 == t.firedElems.length && t.me.unbindEventWithSelectorAndCallback.call(t.target, t.selector, t.callback) }, checkChildNodesRecursively: function (e, t, r, a) { for (var i, n = 0; i = e[n]; n++)r(i, t, a) && a.push({ callback: t.callback, elem: i }), 0 < i.childNodes.length && u.checkChildNodesRecursively(i.childNodes, t, r, a) }, mergeArrays: function (e, t) { var r, a = {}; for (r in e) e.hasOwnProperty(r) && (a[r] = e[r]); for (r in t) t.hasOwnProperty(r) && (a[r] = t[r]); return a }, toElementsArray: function (e) { return e = void 0 !== e && ("number" != typeof e.length || e === c) ? [e] : e } }), e = (l.prototype.addEvent = function (e, t, r, a) { a = { target: e, selector: t, options: r, callback: a, firedElems: [] }; return this._beforeAdding && this._beforeAdding(a), this._eventsBucket.push(a), a }, l.prototype.removeEvent = function (e) { for (var t, r = this._eventsBucket.length - 1; t = this._eventsBucket[r]; r--)e(t) && (this._beforeRemoving && this._beforeRemoving(t), (t = this._eventsBucket.splice(r, 1)) && t.length && (t[0].callback = null)) }, l.prototype.beforeAdding = function (e) { this._beforeAdding = e }, l.prototype.beforeRemoving = function (e) { this._beforeRemoving = e }, l), t = function (i, n) { var o = new e, l = this, s = { fireOnAttributesModification: !1 }; return o.beforeAdding(function (t) { var e = t.target; e !== c.document && e !== c || (e = document.getElementsByTagName("html")[0]); var r = new MutationObserver(function (e) { n.call(this, e, t) }), a = i(t.options); r.observe(e, a), t.observer = r, t.me = l }), o.beforeRemoving(function (e) { e.observer.disconnect() }), this.bindEvent = function (e, t, r) { t = u.mergeArrays(s, t); for (var a = u.toElementsArray(this), i = 0; i < a.length; i++)o.addEvent(a[i], e, t, r) }, this.unbindEvent = function () { var r = u.toElementsArray(this); o.removeEvent(function (e) { for (var t = 0; t < r.length; t++)if (this === w || e.target === r[t]) return !0; return !1 }) }, this.unbindEventWithSelectorOrCallback = function (r) { var a = u.toElementsArray(this), i = r, e = "function" == typeof r ? function (e) { for (var t = 0; t < a.length; t++)if ((this === w || e.target === a[t]) && e.callback === i) return !0; return !1 } : function (e) { for (var t = 0; t < a.length; t++)if ((this === w || e.target === a[t]) && e.selector === r) return !0; return !1 }; o.removeEvent(e) }, this.unbindEventWithSelectorAndCallback = function (r, a) { var i = u.toElementsArray(this); o.removeEvent(function (e) { for (var t = 0; t < i.length; t++)if ((this === w || e.target === i[t]) && e.selector === r && e.callback === a) return !0; return !1 }) }, this }, i = new function () { var s = { fireOnAttributesModification: !1, onceOnly: !1, existing: !1 }; function n(e, t, r) { return !(!u.matchesSelector(e, t.selector) || (e._id === w && (e._id = a++), -1 != t.firedElems.indexOf(e._id))) && (t.firedElems.push(e._id), !0) } var c = (i = new t(function (e) { var t = { attributes: !1, childList: !0, subtree: !0 }; return e.fireOnAttributesModification && (t.attributes = !0), t }, function (e, i) { e.forEach(function (e) { var t = e.addedNodes, r = e.target, a = []; null !== t && 0 < t.length ? u.checkChildNodesRecursively(t, i, n, a) : "attributes" === e.type && n(r, i) && a.push({ callback: i.callback, elem: r }), u.callCallbacks(a, i) }) })).bindEvent; return i.bindEvent = function (e, t, r) { t = void 0 === r ? (r = t, s) : u.mergeArrays(s, t); var a = u.toElementsArray(this); if (t.existing) { for (var i = [], n = 0; n < a.length; n++)for (var o = a[n].querySelectorAll(e), l = 0; l < o.length; l++)i.push({ callback: r, elem: o[l] }); if (t.onceOnly && i.length) return r.call(i[0].elem, i[0].elem); setTimeout(u.callCallbacks, 1, i) } c.call(this, e, t, r) }, i }, o = new function () { var a = {}; function i(e, t) { return u.matchesSelector(e, t.selector) } var n = (o = new t(function () { return { childList: !0, subtree: !0 } }, function (e, r) { e.forEach(function (e) { var t = e.removedNodes, e = []; null !== t && 0 < t.length && u.checkChildNodesRecursively(t, r, i, e), u.callCallbacks(e, r) }) })).bindEvent; return o.bindEvent = function (e, t, r) { t = void 0 === r ? (r = t, a) : u.mergeArrays(a, t), n.call(this, e, t, r) }, o }; d(HTMLElement.prototype), d(NodeList.prototype), d(HTMLCollection.prototype), d(HTMLDocument.prototype), d(Window.prototype); var n = {}; return s(i, n, "unbindAllArrive"), s(o, n, "unbindAllLeave"), n } function l() { this._eventsBucket = [], this._beforeAdding = null, this._beforeRemoving = null } function s(e, t, r) { u.addMethod(t, r, e.unbindEvent), u.addMethod(t, r, e.unbindEventWithSelectorOrCallback), u.addMethod(t, r, e.unbindEventWithSelectorAndCallback) } function d(e) { e.arrive = i.bindEvent, s(i, e, "unbindArrive"), e.leave = o.bindEvent, s(o, e, "unbindLeave") } }(window, void 0), ewww_webp_supported = !1; function check_webp_feature(e, t) { var r; ewww_webp_supported ? t(ewww_webp_supported) : ((r = new Image).onload = function () { ewww_webp_supported = 0 < r.width && 0 < r.height, t(ewww_webp_supported) }, r.onerror = function () { t(!1) }, r.src = "data:image/webp;base64," + { alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==", animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA" }[e]) } function ewwwLoadImages(e) { if (e) { for (var t = document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"), r = 0, a = t.length; r < a; r++)ewwwAttr(t[r], "data-src", t[r].getAttribute("data-webp")), ewwwAttr(t[r], "data-thumbnail", t[r].getAttribute("data-webp-thumbnail")); for (var i = document.querySelectorAll("div.woocommerce-product-gallery__image"), r = 0, a = i.length; r < a; r++)ewwwAttr(i[r], "data-thumb", i[r].getAttribute("data-webp-thumb")) } for (var n = document.querySelectorAll("video"), r = 0, a = n.length; r < a; r++)ewwwAttr(n[r], "poster", e ? n[r].getAttribute("data-poster-webp") : n[r].getAttribute("data-poster-image")); for (var o, l = document.querySelectorAll("img.ewww_webp_lazy_load"), r = 0, a = l.length; r < a; r++)e && (ewwwAttr(l[r], "data-lazy-srcset", l[r].getAttribute("data-lazy-srcset-webp")), ewwwAttr(l[r], "data-srcset", l[r].getAttribute("data-srcset-webp")), ewwwAttr(l[r], "data-lazy-src", l[r].getAttribute("data-lazy-src-webp")), ewwwAttr(l[r], "data-src", l[r].getAttribute("data-src-webp")), ewwwAttr(l[r], "data-orig-file", l[r].getAttribute("data-webp-orig-file")), ewwwAttr(l[r], "data-medium-file", l[r].getAttribute("data-webp-medium-file")), ewwwAttr(l[r], "data-large-file", l[r].getAttribute("data-webp-large-file")), null != (o = l[r].getAttribute("srcset")) && !1 !== o && o.includes("R0lGOD") && ewwwAttr(l[r], "src", l[r].getAttribute("data-lazy-src-webp"))), l[r].className = l[r].className.replace(/\bewww_webp_lazy_load\b/, ""); for (var s = document.querySelectorAll(".ewww_webp"), r = 0, a = s.length; r < a; r++)e ? (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-webp")), ewwwAttr(s[r], "src", s[r].getAttribute("data-src-webp")), ewwwAttr(s[r], "data-orig-file", s[r].getAttribute("data-webp-orig-file")), ewwwAttr(s[r], "data-medium-file", s[r].getAttribute("data-webp-medium-file")), ewwwAttr(s[r], "data-large-file", s[r].getAttribute("data-webp-large-file")), ewwwAttr(s[r], "data-large_image", s[r].getAttribute("data-webp-large_image")), ewwwAttr(s[r], "data-src", s[r].getAttribute("data-webp-src"))) : (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-img")), ewwwAttr(s[r], "src", s[r].getAttribute("data-src-img"))), s[r].className = s[r].className.replace(/\bewww_webp\b/, "ewww_webp_loaded"); window.jQuery && jQuery.fn.isotope && jQuery.fn.imagesLoaded && (jQuery(".fusion-posts-container-infinite").imagesLoaded(function () { jQuery(".fusion-posts-container-infinite").hasClass("isotope") && jQuery(".fusion-posts-container-infinite").isotope() }), jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function () { jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope() })) } function ewwwWebPInit(e) { ewwwLoadImages(e), ewwwNggLoadGalleries(e), document.arrive(".ewww_webp", function () { ewwwLoadImages(e) }), document.arrive(".ewww_webp_lazy_load", function () { ewwwLoadImages(e) }), document.arrive("videos", function () { ewwwLoadImages(e) }), "loading" == document.readyState ? document.addEventListener("DOMContentLoaded", ewwwJSONParserInit) : ("undefined" != typeof galleries && ewwwNggParseGalleries(e), ewwwWooParseVariations(e)) } function ewwwAttr(e, t, r) { null != r && !1 !== r && e.setAttribute(t, r) } function ewwwJSONParserInit() { "undefined" != typeof galleries && check_webp_feature("alpha", ewwwNggParseGalleries), check_webp_feature("alpha", ewwwWooParseVariations) } function ewwwWooParseVariations(e) { if (e) for (var t = document.querySelectorAll("form.variations_form"), r = 0, a = t.length; r < a; r++) { var i = t[r].getAttribute("data-product_variations"), n = !1; try { for (var o in i = JSON.parse(i)) void 0 !== i[o] && void 0 !== i[o].image && (void 0 !== i[o].image.src_webp && (i[o].image.src = i[o].image.src_webp, n = !0), void 0 !== i[o].image.srcset_webp && (i[o].image.srcset = i[o].image.srcset_webp, n = !0), void 0 !== i[o].image.full_src_webp && (i[o].image.full_src = i[o].image.full_src_webp, n = !0), void 0 !== i[o].image.gallery_thumbnail_src_webp && (i[o].image.gallery_thumbnail_src = i[o].image.gallery_thumbnail_src_webp, n = !0), void 0 !== i[o].image.thumb_src_webp && (i[o].image.thumb_src = i[o].image.thumb_src_webp, n = !0)); n && ewwwAttr(t[r], "data-product_variations", JSON.stringify(i)) } catch (e) { } } } function ewwwNggParseGalleries(e) { if (e) for (var t in galleries) { var r = galleries[t]; galleries[t].images_list = ewwwNggParseImageList(r.images_list) } } function ewwwNggLoadGalleries(e) { e && document.addEventListener("ngg.galleria.themeadded", function (e, t) { window.ngg_galleria._create_backup = window.ngg_galleria.create, window.ngg_galleria.create = function (e, t) { var r = $(e).data("id"); return galleries["gallery_" + r].images_list = ewwwNggParseImageList(galleries["gallery_" + r].images_list), window.ngg_galleria._create_backup(e, t) } }) } function ewwwNggParseImageList(e) { for (var t in e) { var r = e[t]; if (void 0 !== r["image-webp"] && (e[t].image = r["image-webp"], delete e[t]["image-webp"]), void 0 !== r["thumb-webp"] && (e[t].thumb = r["thumb-webp"], delete e[t]["thumb-webp"]), void 0 !== r.full_image_webp && (e[t].full_image = r.full_image_webp, delete e[t].full_image_webp), void 0 !== r.srcsets) for (var a in r.srcsets) nggSrcset = r.srcsets[a], void 0 !== r.srcsets[a + "-webp"] && (e[t].srcsets[a] = r.srcsets[a + "-webp"], delete e[t].srcsets[a + "-webp"]); if (void 0 !== r.full_srcsets) for (var i in r.full_srcsets) nggFSrcset = r.full_srcsets[i], void 0 !== r.full_srcsets[i + "-webp"] && (e[t].full_srcsets[i] = r.full_srcsets[i + "-webp"], delete e[t].full_srcsets[i + "-webp"]) } return e } check_webp_feature("alpha", ewwwWebPInit);</script>
-  <title>Inicio &#8211; Negali</title>
+  <title>Perfiles &#8211; Negali</title>
   <meta name='robots' content='max-image-preview:large' />
   <link rel="alternate" type="application/rss+xml" title="Metal Cam &raquo; Feed"
     href="https://metalcamingenieros.com/feed/" />
@@ -916,7 +916,6 @@
       font-size: inherit;
       font-weight: inherit;
       line-height: inherit;
-      
     }
 
     .ast-separate-container .ast-comment-list li.depth-1,
@@ -3667,6 +3666,9 @@
   <link data-optimized="1" rel='stylesheet' id='elementor-frontend-css'
     href='https://metalcamingenieros.com/wp-content/litespeed/css/8cc33cf3d6d54731d4f756114f7d61c4.css?ver=d61c4'
     media='all' />
+  <link data-optimized="1" rel='stylesheet' id='elementor-post-661-css'
+    href='https://metalcamingenieros.com/wp-content/litespeed/css/c9964bf2a75fc8e0be5b4ba103858fb5.css?ver=58fb5'
+    media='all' />
   <link data-optimized="1" rel='stylesheet' id='elementor-post-283-css'
     href='https://metalcamingenieros.com/wp-content/litespeed/css/40d85d9d67de3b5d79b9456e4db5b2d9.css?ver=5b2d9'
     media='all' />
@@ -3703,11 +3705,8 @@
   <link data-optimized="1" rel='stylesheet' id='elementor-global-css'
     href='https://metalcamingenieros.com/wp-content/litespeed/css/45b935c0a0de01070795006c886a0a12.css?ver=a0a12'
     media='all' />
-  <link data-optimized="1" rel='stylesheet' id='elementor-post-10-css'
-    href='https://metalcamingenieros.com/wp-content/litespeed/css/8e4a2b7bbdc36911accb195647a62df9.css?ver=62df9'
-    media='all' />
-  <link data-optimized="1" rel='stylesheet' id='elementor-post-198-css'
-    href='https://metalcamingenieros.com/wp-content/litespeed/css/7676f376a9b368bf918af28130e547c4.css?ver=547c4'
+  <link data-optimized="1" rel='stylesheet' id='elementor-post-664-css'
+    href='https://metalcamingenieros.com/wp-content/litespeed/css/6cdb47a20e8fd4b69524d20d94a149db.css?ver=149db'
     media='all' />
   <link data-optimized="1" rel='stylesheet' id='astra-child-theme-css-css'
     href='https://metalcamingenieros.com/wp-content/litespeed/css/cdfe11d55b841f8a56923ae21f8171cc.css?ver=171cc'
@@ -3723,15 +3722,15 @@
   <!--[if IE]> <script src="https://metalcamingenieros.com/wp-content/themes/astra/assets/js/minified/flexibility.min.js" id="astra-flexibility-js"></script> <script id="astra-flexibility-js-after">flexibility(document.documentElement);</script> <![endif]-->
   <link rel="https://api.w.org/" href="https://metalcamingenieros.com/wp-json/" />
   <link rel="alternate" title="JSON" type="application/json"
-    href="https://metalcamingenieros.com/wp-json/wp/v2/pages/10" />
+    href="https://metalcamingenieros.com/wp-json/wp/v2/pages/664" />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://metalcamingenieros.com/xmlrpc.php?rsd" />
   <meta name="generator" content="WordPress 6.6.2" />
-  <link rel="canonical" href="https://metalcamingenieros.com/" />
-  <link rel='shortlink' href='https://metalcamingenieros.com/' />
+  <link rel="canonical" href="https://metalcamingenieros.com/nosotros/" />
+  <link rel='shortlink' href='https://metalcamingenieros.com/?p=664' />
   <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-    href="https://metalcamingenieros.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmetalcamingenieros.com%2F" />
+    href="https://metalcamingenieros.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmetalcamingenieros.com%2Fnosotros%2F" />
   <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-    href="https://metalcamingenieros.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmetalcamingenieros.com%2F&#038;format=xml" />
+    href="https://metalcamingenieros.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmetalcamingenieros.com%2Fnosotros%2F&#038;format=xml" />
   <meta name="generator"
     content="Elementor 3.23.4; features: e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_lazyload, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
   <style>
@@ -3756,10 +3755,12 @@
       }
     }
   </style>
-  <link rel="icon" href="images/negali_logo_actualizado.png" sizes="32x32" />
-  <link rel="icon" href="images/negali_logo_actualizado.png" sizes="192x192" />
+ <link rel="icon" href="images/negali_logo_actualizado.png" sizes="32x32" />
+  <link rel="icon" href="images/negali_logo_actualizado.png"
+    sizes="192x192" />
   <link rel="apple-touch-icon" href="images/negali_logo_actualizado.png" />
-  <meta name="msapplication-TileImage" content="images/negali_logo_actualizado.png" />
+  <meta name="msapplication-TileImage"
+    content="images/negali_logo_actualizado.png" />
   <style id="wp-custom-css">
     .cabez-mo {
       position: absolute;
@@ -3788,7 +3789,7 @@
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope'
-  class="home page-template-default page page-id-10 ast-desktop ast-page-builder-template ast-no-sidebar astra-4.7.0 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-layout ast-sticky-header-shrink ast-inherit-site-logo-sticky jet-desktop-menu-active elementor-default elementor-kit-9 elementor-page elementor-page-10 astra-addon-4.7.0">
+  class="page-template-default page page-id-664 ast-desktop ast-page-builder-template ast-no-sidebar astra-4.7.0 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-layout ast-sticky-header-shrink ast-inherit-site-logo-sticky jet-desktop-menu-active elementor-default elementor-kit-9 elementor-page elementor-page-664 astra-addon-4.7.0">
   <script data-cfasync="false" data-no-defer="1" data-no-minify="1"
     data-no-optimize="1">if (typeof ewww_webp_supported === "undefined") { var ewww_webp_supported = !1 } if (ewww_webp_supported) { document.body.classList.add("webp-support") }</script>
   <a class="skip-link screen-reader-text" href="#content" role="link" title="Ir al contenido">
@@ -3797,7 +3798,7 @@
     <header class="ast-custom-header" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
       <div class="astra-advanced-hook-17 ">
         <div data-elementor-type="wp-post" data-elementor-id="17" class="elementor elementor-17">
-          <div class="elementor-element elementor-element-a3e2884 cabez-mo e-flex e-con-boxed e-con e-parent"
+            <div class="elementor-element elementor-element-a3e2884 cabez-mo e-flex e-con-boxed e-con e-parent"
             data-id="a3e2884" data-element_type="container"
             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
             <div class="e-con-inner">
@@ -4492,986 +4493,365 @@
         </div>
       </div>
     </header>
+    <div class="astra-advanced-hook-661 ">
+      <div data-elementor-type="wp-post" data-elementor-id="661" class="elementor elementor-661">
+        <div class="elementor-element elementor-element-13b950d e-flex e-con-boxed e-con e-parent" data-id="13b950d"
+          data-element_type="container"
+          data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+          <div class="e-con-inner"></div>
+        </div>
+      </div>
+    </div>
+
+   
     <div id="content" class="site-content">
       <div class="ast-container">
         <div id="primary" class="content-area primary">
           <main id="main" class="site-main">
-            <article class="post-10 page type-page status-publish ast-article-single" id="post-10"
+            <article class="post-664 page type-page status-publish ast-article-single" id="post-664"
               itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
               <header class="entry-header ast-no-thumbnail ast-no-title ast-header-without-markup"></header>
               <div class="entry-content clear" itemprop="text">
-                <div data-elementor-type="wp-page" data-elementor-id="10" class="elementor elementor-10">
-                  <!aqui es donde se gestiona las imagenes -->
-                    <div class="elementor-element elementor-element-cf1eb4c e-flex e-con-boxed e-con e-parent"
-                      data-id="cf1eb4c" data-element_type="container"
-                      data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:1094,&quot;url&quot;:&quot;images/fondo_1.jpg&quot;},{&quot;id&quot;:1069,&quot;url&quot;:&quot;images/fondo_2.jpg&quot;},{&quot;id&quot;:1070,&quot;url&quot;:&quot;images/fondo_3.jpg&quot;}],&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_slide_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500}">
-                      <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-0a7928e e-con-full e-flex e-con e-child"
-                          data-id="0a7928e" data-element_type="container"
-                          data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                          <div
-                            class="elementor-element elementor-element-2f03cb7 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading"
-                            data-id="2f03cb7" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                              <style>
-                                /*! elementor - v3.23.0 - 05-08-2024 */
-                                .elementor-heading-title {
-                                  padding: 0;
-                                  margin: 0;
-                                  line-height: 1
-                                }
+                <div data-elementor-type="wp-page" data-elementor-id="664" class="elementor elementor-664">
+                  <div class="elementor-element elementor-element-9b7a064 e-flex e-con-boxed e-con e-parent"
+                    data-id="9b7a064" data-element_type="container"
+                    data-settings="{&quot;jet_parallax_layout_list&quot;:[],&quot;background_background&quot;:&quot;classic&quot;}">
+      
+
+
+                  </div>
+                
+<div class="products-section">
+    <div class="section-header">
+        <h1>PERFILES</h1>
+        <div class="header-divider"></div>
+    </div>
+    
+     <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/SAE_1018.jpg" alt="SAE 1018" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">SAE 1018</h2>
+                <ul class="product-features">
+                    <li>SAE 1018</li>
+                </ul>
+                <a href="productosacero.html?producto=SAE_1018" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+        
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/SAE_1020.jpg" alt="SAE 1020" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">SAE 1020</h2>
+                <ul class="product-features">
+                    <li>SAE 1020</li>
+                </ul>
+                <a href="productosacero.html?producto=SAE_1020" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+        
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/TSAE_1045.jpg" alt="SAE 1045" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">SAE 1045</h2>
+                <ul class="product-features">
+                    <li>SAE 1045</li>
+                </ul>
+                <a href="productosacero.html?producto=SAE_1045" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+        
+        <!-- Producto 4 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/SAE_4140.jpg" alt="SAE 4140" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">SAE 4140</h2>
+                <ul class="product-features">
+                    <li>SAE 4140</li>
+                </ul>
+                <a href="productosacero.html?producto=SAE_4140" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+
+                <!-- Producto 5 -->
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/perforados.jpg" alt="PERFORADOS" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">PERFORADOS</h2>
+                <ul class="product-features">
+                    <li>PERFORADOS</li>
+                </ul>
+                <a href="productosacero.html?producto=PERFORADOS" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+
+
+              <!-- Producto 6 -->
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/VIGAS_H_e_I.jpg" alt="VIGAS H e I" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">VIGAS H e I</h2>
+                <ul class="product-features">
+                    <li>VIGAS H e I</li>
+                </ul>
+                <a href="productosacero.html?producto=VIGAS_H_e_I" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+          
+
+              <!-- Producto 7 -->
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/CANALES_U_y_C.jpg" alt="CANALES U y C" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">CANALES U y C</h2>
+                <ul class="product-features">
+                    <li>CANALES U y C</li>
+                </ul>
+                <a href="productosacero.html?producto=CANALES_U_y_C" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+
+          <!-- Producto 8 -->
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/ANGULOS.jpg" alt="ÁNGULOS" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">ÁNGULOS</h2>
+                <ul class="product-features">
+                    <li>ÁNGULOS</li>
+                </ul>
+                <a href="productosacero.html?producto=ANGULOS" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+
+
+          <!-- Producto 9 -->
+
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/PLATINAS.jpg" alt="PLATINAS" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">PLATINAS</h2>
+                <ul class="product-features">
+                    <li>PLATINAS</li>
+                </ul>
+                <a href="productosacero.html?producto=PLATINAS" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+          
+
+          <!-- Producto 10 -->
+
+             <div class="product-card">
+            <div class="product-image-container">
+                <img src="images/BARRAS.jpg" alt="BARRAS" class="product-image">
+            </div>
+            <div class="product-content">
+                <h2 class="product-title">BARRAS</h2>
+                <ul class="product-features">
+                    <li>BARRAS</li>
+                </ul>
+                <a href="productosacero.html?producto=BARRAS" class="info-button">Mayor Información</a>
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+<style>
+    /* Variables de color - Fácil personalización */
+    :root {
+        --primary-color: #0056b3;       /* Color principal (azul) */
+        --secondary-color: #6196ec;     /* Color secundario (rojo) */
+        --accent-color: #D9A003;        /* Color de acento (naranja) */
+        --background-color: #f8f9fa;    /* Color de fondo */
+        --card-bg: #ffffff;            /* Fondo de las tarjetas */
+        --text-color: #333333;         /* Color de texto principal */
+        --light-text: #666666;         /* Texto secundario */
+    }
+    /* Estructura principal */
+    .products-section {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 20px;
+        font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    }
+    
+    /* Encabezado */
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .section-header h1 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .header-divider {
+        width: 80px;
+        height: 4px;
+        background: var(--accent-color);
+        margin: 0 auto;
+    }
+    
+    /* Grid de productos */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    /* Tarjetas de producto */
+    .product-card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    
+    /* Contenedor de imagen */
+    .product-image-container {
+        height: 200px;
+        overflow: hidden;
+        background: #e0e0e0; /* Color de fondo mientras carga la imagen */
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+    
+    .product-card:hover .product-image {
+        opacity: 0.9;
+    }
+    
+    /* Contenido de la tarjeta */
+    .product-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-title {
+        font-size: 1.4rem;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .product-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        flex-grow: 1;
+    }
+    
+    .product-features li {
+        padding: 6px 0;
+        position: relative;
+        padding-left: 25px;
+        color: var(--light-text);
+    }
+    
+    .product-features li:before {
+        content: "•";
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 5px;
+        top: -2px;
+    }
+    
+    /* Botón de información */
+    .info-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--accent-color);
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: auto;
+        align-self: flex-start;
+    }
+    
+    .info-button:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .products-grid {
+            gap: 25px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-header h1 {
+            font-size: 2rem;
+        }
+        
+        .products-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .product-image-container {
+            height: 180px;
+        }
+    }
+</style>
 
-                                .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                                  color: inherit;
-                                  font-size: inherit;
-                                  line-height: inherit
-                                }
-
-                                .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                                  font-size: 15px
-                                }
-
-                                .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                                  font-size: 19px
-                                }
-
-                                .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                                  font-size: 29px
-                                }
-
-                                .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                                  font-size: 39px
-                                }
-
-                                .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                                  font-size: 59px
-                                }
-                              </style>
-                              <h2 class="elementor-heading-title elementor-size-default">BIENVENIDOS A:
-                                <br> NEGALI <br>
-                                Negociación de Acero Laminado Industrial
-                              </h2>
-
-
-                              </style>
-
-                            </div>
-                          </div>
-                          <div
-                            class="elementor-element elementor-element-2125111 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                            data-id="2125111" data-element_type="widget" data-widget_type="divider.default">
-                            <div class="elementor-widget-container">
-                              <style>
-                                /*! elementor - v3.23.0 - 05-08-2024 */
-                                .elementor-widget-divider {
-                                  --divider-border-style: none;
-                                  --divider-border-width: 1px;
-                                  --divider-color: #0c0d0e;
-                                  --divider-icon-size: 20px;
-                                  --divider-element-spacing: 10px;
-                                  --divider-pattern-height: 24px;
-                                  --divider-pattern-size: 20px;
-                                  --divider-pattern-url: none;
-                                  --divider-pattern-repeat: repeat-x
-                                }
-
-                                .elementor-widget-divider .elementor-divider {
-                                  display: flex
-                                }
-
-                                .elementor-widget-divider .elementor-divider__text {
-                                  font-size: 15px;
-                                  line-height: 1;
-                                  max-width: 95%
-                                }
-
-                                .elementor-widget-divider .elementor-divider__element {
-                                  margin: 0 var(--divider-element-spacing);
-                                  flex-shrink: 0
-                                }
-
-                                .elementor-widget-divider .elementor-icon {
-                                  font-size: var(--divider-icon-size)
-                                }
-
-                                .elementor-widget-divider .elementor-divider-separator {
-                                  display: flex;
-                                  margin: 0;
-                                  direction: ltr
-                                }
-
-                                .elementor-widget-divider--view-line_icon .elementor-divider-separator,
-                                .elementor-widget-divider--view-line_text .elementor-divider-separator {
-                                  align-items: center
-                                }
-
-                                .elementor-widget-divider--view-line_icon .elementor-divider-separator:after,
-                                .elementor-widget-divider--view-line_icon .elementor-divider-separator:before,
-                                .elementor-widget-divider--view-line_text .elementor-divider-separator:after,
-                                .elementor-widget-divider--view-line_text .elementor-divider-separator:before {
-                                  display: block;
-                                  content: "";
-                                  border-block-end: 0;
-                                  flex-grow: 1;
-                                  border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
-                                }
-
-                                .elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type {
-                                  flex-grow: 0;
-                                  flex-shrink: 100
-                                }
-
-                                .elementor-widget-divider--element-align-left .elementor-divider-separator:before {
-                                  content: none
-                                }
-
-                                .elementor-widget-divider--element-align-left .elementor-divider__element {
-                                  margin-left: 0
-                                }
-
-                                .elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type {
-                                  flex-grow: 0;
-                                  flex-shrink: 100
-                                }
-
-                                .elementor-widget-divider--element-align-right .elementor-divider-separator:after {
-                                  content: none
-                                }
-
-                                .elementor-widget-divider--element-align-right .elementor-divider__element {
-                                  margin-right: 0
-                                }
-
-                                .elementor-widget-divider--element-align-start .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type {
-                                  flex-grow: 0;
-                                  flex-shrink: 100
-                                }
-
-                                .elementor-widget-divider--element-align-start .elementor-divider-separator:before {
-                                  content: none
-                                }
-
-                                .elementor-widget-divider--element-align-start .elementor-divider__element {
-                                  margin-inline-start: 0
-                                }
-
-                                .elementor-widget-divider--element-align-end .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type {
-                                  flex-grow: 0;
-                                  flex-shrink: 100
-                                }
-
-                                .elementor-widget-divider--element-align-end .elementor-divider-separator:after {
-                                  content: none
-                                }
-
-                                .elementor-widget-divider--element-align-end .elementor-divider__element {
-                                  margin-inline-end: 0
-                                }
-
-                                .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
-                                  border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
-                                }
-
-                                .elementor-widget-divider--separator-type-pattern {
-                                  --divider-border-style: none
-                                }
-
-                                .elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,
-                                .elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,
-                                .elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,
-                                .elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator {
-                                  width: 100%;
-                                  min-height: var(--divider-pattern-height);
-                                  -webkit-mask-size: var(--divider-pattern-size) 100%;
-                                  mask-size: var(--divider-pattern-size) 100%;
-                                  -webkit-mask-repeat: var(--divider-pattern-repeat);
-                                  mask-repeat: var(--divider-pattern-repeat);
-                                  background-color: var(--divider-color);
-                                  -webkit-mask-image: var(--divider-pattern-url);
-                                  mask-image: var(--divider-pattern-url)
-                                }
-
-                                .elementor-widget-divider--no-spacing {
-                                  --divider-pattern-size: auto
-                                }
-
-                                .elementor-widget-divider--bg-round {
-                                  --divider-pattern-repeat: round
-                                }
-
-                                .rtl .elementor-widget-divider .elementor-divider__text {
-                                  direction: rtl
-                                }
-
-                                .e-con-inner>.elementor-widget-divider,
-                                .e-con>.elementor-widget-divider {
-                                  width: var(--container-widget-width, 100%);
-                                  --flex-grow: var(--container-widget-flex-grow)
-                                }
-                              </style>
-                              <div class="elementor-divider">
-                                <span class="elementor-divider-separator">
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!aqui es donde se gestiona para quienes somos -->
-                      <style>
-                        /* Reset y estilos base */
-                        body,
-                        html {
-                          font-family: 'Arial', sans-serif;
-                          margin: 0;
-                          padding: 0;
-                          width: 100%;
-                          overflow-x: hidden;
-                          scroll-behavior: smooth;
-                        }
-
-                        /* Contenedor principal al 100% de ancho */
-                        .container {
-                          width: 100%;
-                          margin: 0;
-                          padding: 0;
-                        }
-
-                        /* Tarjeta que ocupa todo el ancho */
-                        .card {
-                          display: flex;
-                          width: 100%;
-                          min-height: 100vh;
-                        }
-
-                        /* Sección izquierda - Servicios con parallax */
-                        .services-section {
-                          flex: 0.5;
-                          padding: 60px 40px;
-                          background-image: url('images/segundo.png');
-                          background-size: cover;
-                          background-position: center;
-                          background-attachment: fixed;
-                          /* Base para el efecto parallax */
-                          position: relative;
-                          color: white;
-                          overflow: hidden;
-                        }
-
-                        .image-overlay {
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          right: 0;
-                          bottom: 0;
-                          background-color: rgba(0, 0, 0, 0.6);
-                          transition: background-color 0.5s ease;
-                        }
-
-                        .services-section:hover .image-overlay {
-                          background-color: rgba(0, 0, 0, 0.5);
-                        }
-
-                        .services-list {
-                          position: relative;
-                          z-index: 1;
-                          max-width: 600px;
-                          margin: 0 auto;
-                          transform: translateZ(0);
-                          /* Mejora el rendimiento del parallax */
-                        }
-
-                        .service-item {
-                          display: flex;
-                          margin-bottom: 40px;
-                          align-items: flex-start;
-                          transition: transform 0.3s ease;
-                        }
-
-                        .service-item:hover {
-                          transform: translateX(10px);
-                        }
-
-                        .icon {
-                          margin-right: 20px;
-                          font-size: 28px;
-                          color: #ffd900;
-                          flex-shrink: 0;
-                        }
-
-                        .service-info h3 {
-                          margin: 0 0 15px 0;
-                          font-size: 22px;
-                          color: #ffd900;
-                          text-transform: uppercase;
-                        }
-
-                        .service-info p {
-                          margin: 0;
-                          font-size: 16px;
-                          line-height: 1.6;
-                        }
-
-                        /* Sección derecha - Información */
-                        .company-info {
-                          flex: 1;
-                          padding: 60px 40px;
-                          background: white;
-                          max-width: 600px;
-                          margin: 0 auto;
-                        }
-
-                        .company-info h1 {
-                          font-size: 36px;
-                          color: #002a57;
-                          margin: 0 0 30px 0;
-                          text-align: center;
-                          text-transform: uppercase;
-                          position: relative;
-                          padding-bottom: 15px;
-                        }
-
-                        .company-info h1:after {
-                          content: '';
-                          position: absolute;
-                          bottom: 0;
-                          left: 50%;
-                          transform: translateX(-50%);
-                          width: 100px;
-                          height: 3px;
-                          background: #ab7d00;
-                        }
-
-                        .description {
-                          margin-bottom: 25px;
-                          font-size: 16px;
-                          line-height: 1.7;
-                        } 
-                        
-
-                        .btn {
-                          display: inline-block;
-                          padding: 15px 30px;
-                          background: #002a57;
-                          color: white;
-                          border: none;
-                          border-radius: 4px;
-                          font-size: 16px;
-                          font-weight: bold;
-                          text-transform: uppercase;
-                          cursor: pointer;
-                          transition: all 0.3s;
-                          margin-top: 20px;
-                          position: relative;
-                          overflow: hidden;
-                        }
-
-                        .btn:hover {
-                          background: #ab7d00;
-                          transform: translateY(-3px);
-                          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                        }
-
-                        /* Efecto Parallax mejorado */
-                        .parallax-bg {
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          width: 100%;
-                          height: 100%;
-                          background-size: cover;
-                          background-position: center;
-                          will-change: transform;
-                          /* Optimización para el parallax */
-                        }
-
-                        /* Responsive Design */
-                        @media (max-width: 1200px) {
-
-                          .services-list,
-                          .company-info {
-                            padding: 40px 30px;
-                          }
-                        }
-
-                        @media (max-width: 992px) {
-                          .card {
-                            flex-direction: column;
-                          }
-
-                          .services-section {
-                            background-attachment: scroll !important;
-                          }
-
-                          .services-section,
-                          .company-info {
-                            padding: 50px 20px;
-                          }
-
-                          .services-list,
-                          .company-info {
-                            max-width: 100%;
-                          }
-                        }
-
-                        @media (max-width: 576px) {
-                          .service-item {
-                            flex-direction: column;
-                          }
-
-                          .icon {
-                            margin-bottom: 15px;
-                          }
-
-                          .company-info h1 {
-                            font-size: 28px;
-                          }
-                        }
-                      </style>
-                      <div class="container">
-                        <div class="card">
-                          <!-- Sección de la izquierda con los servicios -->
-                          <div class="services-section" id="parallax-section">
-                            <div class="parallax-bg" id="parallax-bg"></div>
-                            <div class="image-overlay"></div>
-                            <div class="services-list">
-                              <div class="service-item">
-                                <div class="icon">
-                                  <i class="fas fa-cogs"></i>
-                                </div>
-                                <div class="service-info">
-                                  <h3>SUMINISTRO DE ACEROS</h3>
-                                  <p>Ofrecemos una amplia gama de aceros estructurales, industriales y especiales,
-                                    garantizando materiales certificados y listos para cada proyecto.</p>
-                                </div>
-                              </div>
-                              <div class="service-item">
-                                <div class="icon">
-                                  <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <div class="service-info">
-                                  <h3>ASESORÍA ESPECIALIZADA</h3>
-                                  <p>Ayudamos a nuestros clientes a elegir el acero ideal según sus necesidades, con
-                                    soporte técnico y cumplimiento de normas internacionales.</p>
-                                </div>
-                              </div>
-                              <div class="service-item">
-                                <div class="icon">
-                                  <i class="fas fa-industry"></i>
-                                </div>
-                                <div class="service-info">
-                                  <h3>LOGÍSTICA EFICIENTE</h3>
-                                  <p>Entregamos tus pedidos con rapidez y seguridad a cualquier punto del país,
-                                    asegurando continuidad y confianza en tus operaciones.</p>
-                                </div>
-                              </div>
-                              <div class="service-item">
-                                <div class="icon">
-                                  <i class="fas fa-tools"></i>
-                                </div>
-                                <div class="service-info">
-                                  <h3>SOLUCIONES PARA LA INDUSTRIA</h3>
-                                  <p>Negali es el aliado estratégico de empresas metalmecánicas, constructoras e
-                                    industriales que buscan calidad, garantía y servicio ágil.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Sección de la derecha con la información de la empresa -->
-                          <div class="company-info">
-                            <h1>Negali</h1>
-                            <p class="description">Es una empresa peruana con sólida experiencia en la
-                              <strong>comercialización de aceros y materiales metálicos de alta calidad</strong>,
-                              respaldada por años de servicio a la industria metalmecánica, de construcción y sectores
-                              industriales diversos. Nos especializamos en proveer una amplia gama de productos que
-                              cumplen con las principales normas internacionales como ASTM y SAE, garantizando a
-                              nuestros clientes soluciones confiables y certificadas para cada proyecto.
-                            </p>
-                            <p class="description">En Negali estamos comprometidos con <strong>la calidad, la asesoría
-                                técnica y la entrega oportuna,</strong> siendo un socio estratégico para empresas que
-                              buscan materiales con excelentes propiedades mecánicas y químicas, adecuados para
-                              aplicaciones estructurales, industriales y de fabricación metálica.</p>
-                            <p class="description">Gracias a nuestra experiencia, hoy contamos con una participación en
-                              el mercado ofreciendo materiales de primera para obras de pequeña y gran envergadura, con
-                              un enfoque en brindar confianza, respaldo técnico y un servicio ágil que asegura el éxito
-                              de cada proyecto.</p>
-                            <button class="btn" onclick="window.open('about.html', '_self');">
-                              Sobre nosotros
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                          const parallaxSection = document.getElementById('parallax-section');
-                          const parallaxBg = document.getElementById('parallax-bg');
-
-                          // Clona el fondo de la sección para el efecto parallax
-                          parallaxBg.style.backgroundImage = window.getComputedStyle(parallaxSection).backgroundImage;
-                          parallaxSection.style.backgroundImage = 'none';
-
-                          // Configura el efecto parallax solo en desktop
-                          if (window.innerWidth > 992) {
-                            window.addEventListener('scroll', function () {
-                              const scrollPosition = window.pageYOffset;
-                              const sectionOffset = parallaxSection.offsetTop;
-                              const sectionHeight = parallaxSection.offsetHeight;
-
-                              // Solo aplica el efecto cuando la sección está visible
-                              if (scrollPosition > sectionOffset - window.innerHeight &&
-                                scrollPosition < sectionOffset + sectionHeight) {
-
-                                const offset = (scrollPosition - sectionOffset) * 0.3;
-                                parallaxBg.style.transform = `translateY(${offset}px)`;
-                              }
-                            });
-                          }
-
-                          // Maneja el redimensionamiento de la ventana
-                          window.addEventListener('resize', function () {
-                            if (window.innerWidth <= 992) {
-                              parallaxBg.style.transform = 'none';
-                              parallaxSection.style.backgroundImage = parallaxBg.style.backgroundImage;
-                            } else {
-                              parallaxSection.style.backgroundImage = 'none';
-                            }
-                          });
-                        });
-                      </script>
-
-                      <div class="gdlr-core-pbf-wrapper"
-                        style="padding: 110px 0px; position: relative; overflow: hidden;">
-                        <!-- Fondo con efecto parallax -->
-                        <div class="parallax-background" style="position: absolute; 
-                top: 0; 
-                left: 0; 
-                width: 100%; 
-                height: 100%; 
-                background-image: url('images/index5.jpg'); 
-                background-size: cover; 
-                background-position: center; 
-                opacity: 1.4; 
-                z-index: 0;
-                filter: brightness(0.5) contrast(1.2);
-                transform: translate3d(0,0,0);"></div>
-
-                        <!-- Contenido principal -->
-                        <div class="gdlr-core-pbf-wrapper-content" style="position: relative; z-index: 1;">
-                          <div class="gdlr-core-pbf-wrapper-container clearfix"
-                            style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center;">
-
-                            <!-- Columna izquierda (imagen) -->
-                            <div class="image-column" style="flex: 1; padding: 0 15px; position: relative; z-index: 2;">
-                              <div style="margin: -40px 0;">
-                                <img src="images/index2.png" alt="Industrial Worker" class="zoom-static">
-
-                                <style>
-                                  .zoom-static {
-                                    transform: scale(1.8);
-                                    /* Aumenta el tamaño */
-                                    transform-origin: center;
-                                    /* El zoom se hace desde el centro */
-                                    max-width: 100%;
-                                    height: auto;
-                                    display: block;
-                                  }
-                                </style>
-
-                              </div>
-                            </div>
-
-                            <!-- Columna derecha (texto) -->
-                            <div class="text-column" style="flex: 1; padding: 80px 30px; background-color: #002a57; position: relative; z-index: 2; 
-       max-width: 90%; min-width: 250px; font-size: 1rem; text-align: center; border: none; 
-       color: white; border-radius: 8px; transition: all 0.3s ease-in-out;">
-                              <!-- Título -->
-                              <div style="margin-bottom: 30px; display: flex; align-items: center;">
-                                <i class="fa fa-globe" style="font-size: 45px; color: #fff; margin-right: 20px;"></i>
-                                <div>
-                                  <span style="display: block; font-size: 17px; color: #fff; margin-bottom: 5px;">
-                                    Comprometidos con el desarrollo de la industría del Perú
-                                  </span>
-                                  <h3
-                                    style="font-size: 43px; color: #fff; margin: 0; letter-spacing: 0; text-transform: none; position: relative; padding-bottom: 15px;">
-                                    Aceros Negali en nuestro país.
-                                    <span
-                                      style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #fff;"></span>
-                                  </h3>
-                                </div>
-                              </div>
-
-                              <!-- Contenido de texto -->
-                              <div style="color: #fff; font-size: 16px; line-height: 1.6;">
-                                <p>En <strong>NEGALI</strong> brindamos soluciones integrales en aceros de alta calidad,
-                                  atendiendo a los
-                                  sectores de minería, construcción, metalmecánica, calderería, transporte e industrias
-                                  en general. Nos especializamos en la comercialización de <strong>planchas, tubos y
-                                    perfiles
-                                    estructurales</strong> , cumpliendo con normas internacionales como ASTM y
-                                  ofreciendo productos
-                                  certificados para garantizar la máxima seguridad y rendimiento en cada aplicación.</p>
-                                <p><strong>Estamos comprometidos en atender cada necesidad con eficiencia y en el
-                                    momento oportuno,
-                                    brindando siempre la mejor alternativa para impulsar el desarrollo de sus proyectos
-                                    industriales.</strong></p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <style>
-                        @media (max-width: 992px) {
-                          .gdlr-core-pbf-wrapper-container {
-                            flex-direction: column;
-                          }
-
-                          .image-column,
-                          .text-column {
-                            flex: none;
-                            width: 100%;
-                            max-width: 100%;
-                          }
-
-                          .image-column {
-                            text-align: center;
-                          }
-
-                          .text-column {
-                            margin-top: 30px;
-                          }
-                        }
-                      </style>
-                      <!-- Script para el efecto parallax -->
-                      <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                          const parallaxBg = document.querySelector('.parallax-background');
-
-                          // Configura el efecto parallax
-                          function updateParallax() {
-                            const scrollPosition = window.pageYOffset;
-                            const elementOffset = parallaxBg.parentElement.offsetTop;
-                            const elementHeight = parallaxBg.parentElement.offsetHeight;
-
-                            // Solo aplica el efecto cuando el elemento está visible
-                            if (scrollPosition > elementOffset - window.innerHeight &&
-                              scrollPosition < elementOffset + elementHeight) {
-                              const speed = 0.2;
-                              const offset = (scrollPosition - elementOffset) * speed;
-                              parallaxBg.style.transform = `translate3d(0, ${offset}px, 0)`;
-                            }
-                          }
-
-                          // Ejecuta al cargar y al hacer scroll
-                          window.addEventListener('scroll', updateParallax);
-                          window.addEventListener('resize', updateParallax);
-                          updateParallax();
-                        });
-                      </script>
-
-                      <!-- Incluir Font Awesome para el icono -->
-                      <link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-                      <div class="elementor-element-6f5e792" style="background-color: #4b10b7" data-id="6f5e792"
-                        data-element_type="container"
-                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-                        <style>
-                          .elementor-element-6f5e792 {
-                            background-image: url('images/fondo_servicios.jpg');
-                            /* Reemplaza esta URL con la ruta de tu imagen */
-                            background-size: cover;
-                            /* Para que la imagen cubra todo el contenedor */
-                            background-position: center center;
-                            /* Para centrar la imagen en el contenedor */
-                            background-repeat: no-repeat;
-                            /* Para evitar que la imagen de fondo se repita */
-                            /* Opcional: añade un color de fondo de respaldo si la imagen no carga */
-                            background-color: #002a57;
-                            /* Un color gris claro como ejemplo */
-                          }
-                        </style>
-                        <div class="elementor-element elementor-element-047bb8e e-con-full e-flex e-con e-child"
-                          data-id="047bb8e" data-element_type="container"
-                          data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                          <div class="elementor-element elementor-element-c2af83e e-con-full e-flex e-con e-child"
-                            data-id="c2af83e" data-element_type="container"
-                            data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                            <div
-                              class="elementor-element elementor-element-22f84e9 elementor-widget elementor-widget-heading"
-                              data-id="22f84e9" data-element_type="widget" data-widget_type="heading.default">
-                              <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Servicios</h2>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="elementor-element elementor-element-c298d17 e-con-full e-flex e-con e-child"
-                            data-id="c298d17" data-element_type="container"
-                            data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-
-                            <div
-                              class="elementor-element elementor-element-16db8a6 elementor-widget elementor-widget-jet-listing-grid"
-                              data-id="16db8a6" data-element_type="widget"
-                              data-settings="{&quot;columns&quot;:&quot;5&quot;,&quot;columns_mobile&quot;:&quot;1&quot;}"
-                              data-widget_type="jet-listing-grid.default">
-                              <div class="elementor-widget-container">
-                                <div class="jet-listing-grid jet-listing">
-                                  <div class="jet-listing-grid__slider"
-                                    data-slider_options="{&quot;autoplaySpeed&quot;:5000,&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:true,&quot;infinite&quot;:true,&quot;centerMode&quot;:false,&quot;speed&quot;:500,&quot;arrows&quot;:true,&quot;dots&quot;:false,&quot;slidesToScroll&quot;:1,&quot;prevArrow&quot;:&quot;&lt;div class='jet-listing-grid__slider-icon prev-arrow ' role='button' aria-label='Previous'&gt;&lt;svg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http:\/\/www.w3.org\/2000\/svg'&gt;&lt;path d='M119 47.3166C119 48.185 118.668 48.9532 118.003 49.6212L78.8385 89L118.003 128.379C118.668 129.047 119 129.815 119 130.683C119 131.552 118.668 132.32 118.003 132.988L113.021 137.998C112.356 138.666 111.592 139 110.729 139C109.865 139 109.101 138.666 108.436 137.998L61.9966 91.3046C61.3322 90.6366 61 89.8684 61 89C61 88.1316 61.3322 87.3634 61.9966 86.6954L108.436 40.002C109.101 39.334 109.865 39 110.729 39C111.592 39 112.356 39.334 113.021 40.002L118.003 45.012C118.668 45.68 119 46.4482 119 47.3166Z' fill='black'\/&gt;&lt;\/svg&gt;&lt;\/div&gt;&quot;,&quot;nextArrow&quot;:&quot;&lt;div class='jet-listing-grid__slider-icon next-arrow ' role='button' aria-label='Next'&gt;&lt;svg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='  '&gt;&lt;path d='M119 47.3166C119 48.185 118.668 48.9532 118.003 49.6212L78.8385 89L118.003 128.379C118.668 129.047 119 129.815 119 130.683C119 131.552 118.668 132.32 118.003 132.988L113.021 137.998C112.356 138.666 111.592 139 110.729 139C109.865 139 109.101 138.666 108.436 137.998L61.9966 91.3046C61.3322 90.6366 61 89.8684 61 89C61 88.1316 61.3322 87.3634 61.9966 86.6954L108.436 40.002C109.101 39.334 109.865 39 110.729 39C111.592 39 112.356 39.334 113.021 40.002L118.003 45.012C118.668 45.68 119 46.4482 119 47.3166Z' fill='black'\/&gt;&lt;\/svg&gt;&lt;\/div&gt;&quot;,&quot;rtl&quot;:false,&quot;itemsCount&quot;:6,&quot;fade&quot;:false,&quot;slidesToShow&quot;:{&quot;desktop&quot;:5,&quot;tablet&quot;:5,&quot;mobile&quot;:1}}"
-                                    dir="ltr">
-                                    <div
-                                      class="jet-listing-grid__items grid-col-desk-5 grid-col-tablet-5 grid-col-mobile-1 jet-listing-grid--198"
-                                      data-queried-id="10|WP_Post"
-                                      data-nav="{&quot;enabled&quot;:false,&quot;type&quot;:null,&quot;more_el&quot;:null,&quot;query&quot;:[],&quot;widget_settings&quot;:{&quot;lisitng_id&quot;:198,&quot;posts_num&quot;:6,&quot;columns&quot;:5,&quot;columns_tablet&quot;:5,&quot;columns_mobile&quot;:1,&quot;is_archive_template&quot;:&quot;&quot;,&quot;post_status&quot;:[&quot;publish&quot;],&quot;use_random_posts_num&quot;:&quot;&quot;,&quot;max_posts_num&quot;:9,&quot;not_found_message&quot;:&quot;No data was found&quot;,&quot;is_masonry&quot;:false,&quot;equal_columns_height&quot;:&quot;&quot;,&quot;use_load_more&quot;:&quot;&quot;,&quot;load_more_id&quot;:&quot;&quot;,&quot;load_more_type&quot;:&quot;click&quot;,&quot;load_more_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;use_custom_post_types&quot;:&quot;&quot;,&quot;custom_post_types&quot;:[],&quot;hide_widget_if&quot;:&quot;&quot;,&quot;carousel_enabled&quot;:&quot;yes&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;arrows&quot;:&quot;true&quot;,&quot;arrow_icon&quot;:&quot;fa fa-angle-left&quot;,&quot;dots&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pause_on_hover&quot;:&quot;true&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;center_mode&quot;:&quot;&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500,&quot;inject_alternative_items&quot;:&quot;&quot;,&quot;injection_items&quot;:[],&quot;scroll_slider_enabled&quot;:&quot;&quot;,&quot;scroll_slider_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;custom_query&quot;:false,&quot;custom_query_id&quot;:&quot;&quot;,&quot;_element_id&quot;:&quot;&quot;}}"
-                                      data-page="1" data-pages="1" data-listing-source="posts" data-listing-id="198"
-                                      data-query-id="">
-                                      <div class="jet-listing-grid__item jet-listing-dynamic-post-197"
-                                        data-post-id="197">
-                                        <style type="text/css">
-                                          .jet-listing-dynamic-post-197 .elementor-element.elementor-element-d682f10:not(.elementor-motion-effects-element-type-background),
-                                          .jet-listing-dynamic-post-197 .elementor-element.elementor-element-d682f10>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-                                            background-image: url("images/Cortes2.jpg");
-                                          }
-                                        </style>
-                                        <div data-elementor-type="jet-listing-items" data-elementor-id="198"
-                                          class="elementor elementor-198">
-                                          <div
-                                            class="elementor-element elementor-element-d682f10 e-flex e-con-boxed e-con e-parent"
-                                            data-id="d682f10" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-                                            <div class="e-con-inner">
-                                              <div
-                                                class="elementor-element elementor-element-7d8a8a3 e-con-full e-flex e-con e-child"
-                                                data-id="7d8a8a3" data-element_type="container"
-                                                data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                <div
-                                                  class="elementor-element elementor-element-db245a5 e-con-full e-flex e-con e-child"
-                                                  data-id="db245a5" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-205d330 elementor-widget elementor-widget-jet-listing-dynamic-field"
-                                                    data-id="205d330" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-field.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-field display-inline">
-                                                        <div class="jet-listing-dynamic-field__inline-wrap">
-                                                          <div class="jet-listing-dynamic-field__content">CORTES
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div
-                                                    class="elementor-element elementor-element-5233dc7 elementor-widget elementor-widget-jet-listing-dynamic-link"
-                                                    data-id="5233dc7" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-link.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-link"><a
-                                                          href="services.html" //LINK PARA QUE ME REDIRIJA A SERVICIOS
-                                                          class="jet-listing-dynamic-link__link"><span
-                                                            class="jet-listing-dynamic-link__label">Leer más</span></a>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div
-                                                  class="elementor-element elementor-element-9ce8030 e-con-full e-flex e-con e-child"
-                                                  data-id="9ce8030" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-c0d8bd8 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-                                                    data-id="c0d8bd8" data-element_type="widget"
-                                                    data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                      <style>
-                                                        /*! elementor - v3.23.0 - 05-08-2024 */
-                                                        .elementor-widget-image {
-                                                          text-align: center
-                                                        }
-
-                                                        .elementor-widget-image a {
-                                                          display: inline-block
-                                                        }
-
-                                                        .elementor-widget-image a img[src$=".svg"] {
-                                                          width: 48px
-                                                        }
-
-                                                        .elementor-widget-image img {
-                                                          vertical-align: middle;
-                                                          display: inline-block
-                                                        }
-                                                      </style><img decoding="async" width="300" height="300"
-                                                        src="https://metalcamingenieros.com/wp-content/uploads/2024/09/carros-mineros-ic.png"
-                                                        class="attachment-medium size-medium wp-image-487" alt=""
-                                                        srcset="https://metalcamingenieros.com/wp-content/uploads/2024/09/carros-mineros-ic.png 300w, https://metalcamingenieros.com/wp-content/uploads/2024/09/carros-mineros-ic-150x150.png 150w, https://metalcamingenieros.com/wp-content/uploads/2024/09/carros-mineros-ic-270x270.png 270w"
-                                                        sizes="(max-width: 300px) 100vw, 300px" />
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="jet-listing-grid__item jet-listing-dynamic-post-195"
-                                        data-post-id="195">
-                                        <style type="text/css">
-                                          .jet-listing-dynamic-post-195 .elementor-element.elementor-element-d682f10:not(.elementor-motion-effects-element-type-background),
-                                          .jet-listing-dynamic-post-195 .elementor-element.elementor-element-d682f10>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-                                            background-image: url("images/asesoria2.jpg");
-                                          }
-                                        </style>
-                                        <div data-elementor-type="jet-listing-items" data-elementor-id="198"
-                                          class="elementor elementor-198">
-                                          <div
-                                            class="elementor-element elementor-element-d682f10 e-flex e-con-boxed e-con e-parent"
-                                            data-id="d682f10" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-                                            <style>
-
-                                            </style>
-                                            <div class="e-con-inner">
-                                              <div
-                                                class="elementor-element elementor-element-7d8a8a3 e-con-full e-flex e-con e-child"
-                                                data-id="7d8a8a3" data-element_type="container"
-                                                data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                <div
-                                                  class="elementor-element elementor-element-db245a5 e-con-full e-flex e-con e-child"
-                                                  data-id="db245a5" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-205d330 elementor-widget elementor-widget-jet-listing-dynamic-field"
-                                                    data-id="205d330" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-field.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-field display-inline">
-                                                        <div class="jet-listing-dynamic-field__inline-wrap">
-                                                          <div class="jet-listing-dynamic-field__content">ASESORÍA
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div
-                                                    class="elementor-element elementor-element-5233dc7 elementor-widget elementor-widget-jet-listing-dynamic-link"
-                                                    data-id="5233dc7" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-link.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-link"><a
-                                                          href="services.html"
-                                                          class="jet-listing-dynamic-link__link"><span
-                                                            class="jet-listing-dynamic-link__label">Leer más</span></a>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div
-                                                  class="elementor-element elementor-element-9ce8030 e-con-full e-flex e-con e-child"
-                                                  data-id="9ce8030" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-c0d8bd8 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-                                                    data-id="c0d8bd8" data-element_type="widget"
-                                                    data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                      <img loading="lazy" decoding="async" width="300" height="300"
-                                                        src="https://metalcamingenieros.com/wp-content/uploads/2024/09/mantenimiento-ic.png"
-                                                        class="attachment-medium size-medium wp-image-495" alt=""
-                                                        srcset="https://metalcamingenieros.com/wp-content/uploads/2024/09/mantenimiento-ic.png 300w, https://metalcamingenieros.com/wp-content/uploads/2024/09/mantenimiento-ic-150x150.png 150w, https://metalcamingenieros.com/wp-content/uploads/2024/09/mantenimiento-ic-270x270.png 270w"
-                                                        sizes="(max-width: 300px) 100vw, 300px" />
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="jet-listing-grid__item jet-listing-dynamic-post-194"
-                                        data-post-id="194">
-                                        <style type="text/css">
-                                          .jet-listing-dynamic-post-194 .elementor-element.elementor-element-d682f10:not(.elementor-motion-effects-element-type-background),
-                                          .jet-listing-dynamic-post-194 .elementor-element.elementor-element-d682f10>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-                                            background-image: url("images/envios.jpg");
-                                          }
-                                        </style>
-                                        <div data-elementor-type="jet-listing-items" data-elementor-id="198"
-                                          class="elementor elementor-198">
-                                          <div
-                                            class="elementor-element elementor-element-d682f10 e-flex e-con-boxed e-con e-parent"
-                                            data-id="d682f10" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-                                            <div class="e-con-inner">
-                                              <div
-                                                class="elementor-element elementor-element-7d8a8a3 e-con-full e-flex e-con e-child"
-                                                data-id="7d8a8a3" data-element_type="container"
-                                                data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                <div
-                                                  class="elementor-element elementor-element-db245a5 e-con-full e-flex e-con e-child"
-                                                  data-id="db245a5" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-205d330 elementor-widget elementor-widget-jet-listing-dynamic-field"
-                                                    data-id="205d330" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-field.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-field display-inline">
-                                                        <div class="jet-listing-dynamic-field__inline-wrap">
-                                                          <div class="jet-listing-dynamic-field__content">ENVÍOS
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div
-                                                    class="elementor-element elementor-element-5233dc7 elementor-widget elementor-widget-jet-listing-dynamic-link"
-                                                    data-id="5233dc7" data-element_type="widget"
-                                                    data-widget_type="jet-listing-dynamic-link.default">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="jet-listing jet-listing-dynamic-link"><a
-                                                          href="services.html"
-                                                          class="jet-listing-dynamic-link__link"><span
-                                                            class="jet-listing-dynamic-link__label">Leer más</span></a>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div
-                                                  class="elementor-element elementor-element-9ce8030 e-con-full e-flex e-con e-child"
-                                                  data-id="9ce8030" data-element_type="container"
-                                                  data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-                                                  <div
-                                                    class="elementor-element elementor-element-c0d8bd8 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-                                                    data-id="c0d8bd8" data-element_type="widget"
-                                                    data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                      <img loading="lazy" decoding="async" width="300" height="300"
-                                                        src="https://metalcamingenieros.com/wp-content/uploads/2024/09/obras-civules-ic.png"
-                                                        class="attachment-medium size-medium wp-image-496" alt=""
-                                                        srcset="https://metalcamingenieros.com/wp-content/uploads/2024/09/obras-civules-ic.png 300w, https://metalcamingenieros.com/wp-content/uploads/2024/09/obras-civules-ic-150x150.png 150w, https://metalcamingenieros.com/wp-content/uploads/2024/09/obras-civules-ic-270x270.png 270w"
-                                                        sizes="(max-width: 300px) 100vw, 300px" />
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                 </div>
               </div>
             </article>
@@ -5479,9 +4859,8 @@
         </div>
       </div>
     </div>
-    <footer class="ast-custom-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
-      <div class="astra-advanced-hook-283 ">
-        <div data-elementor-type="wp-post" data-elementor-id="283" class="elementor elementor-283">
+   <div class="astra-advanced-hook-283 ">
+    <div data-elementor-type="wp-post" data-elementor-id="283" class="elementor elementor-283">
 
           <d iv class="elementor-element elementor-element-38a9112 e-con-full e-flex e-con e-parent" data-id="38a9112"
             data-element_type="container"
@@ -5501,10 +4880,44 @@
                   </div>
                 </div>
               </div>
-     <div class="elementor-element elementor-element-5188663 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
-     data-id="5188663" data-element_type="widget" data-widget_type="text-editor.default">
-    <div class="elementor-widget-container">
-<p style="
+              <div
+                class="elementor-element elementor-element-5188663 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
+                data-id="5188663" data-element_type="widget" data-widget_type="text-editor.default">
+                <div class="elementor-widget-container">
+                  <style>
+                    /*! elementor - v3.23.0 - 05-08-2024 */
+                    .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                      background-color: #69727d;
+                      color: #fff
+                    }
+
+                    .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                      color: #69727d;
+                      border: 3px solid;
+                      background-color: transparent
+                    }
+
+                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                      margin-top: 8px
+                    }
+
+                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                      width: 1em;
+                      height: 1em
+                    }
+
+                    .elementor-widget-text-editor .elementor-drop-cap {
+                      float: left;
+                      text-align: center;
+                      line-height: 5;
+                      font-size: 50px
+                    }
+
+                    .elementor-widget-text-editor .elementor-drop-cap-letter {
+                      display: inline-block
+                    }
+                  </style>
+                 <p style="
     font-size: 0.8rem;  /* Reduce el tamaño de la fuente */
     line-height: 1.3;   /* Ajusta la altura de la línea para mayor compactación */
     text-align: left;
@@ -5521,10 +4934,8 @@
 ">
 Es una empresa peruana con sólida experiencia en la comercialización de aceros y materiales metálicos de alta calidad, respaldada por años de servicio a la industria metalmecánica, de construcción y sectores industriales diversos.
 </p>
-
-
-    </div>
-</div>
+                </div>
+              </div>
             </div>
             
             <div class="elementor-element elementor-element-329bc07 e-con-full e-flex e-con e-child" data-id="329bc07"
@@ -5711,9 +5122,7 @@ Es una empresa peruana con sólida experiencia en la comercialización de aceros
               
             </div>
         </div>
-      </div>
-
-    </footer>
+        </div>
   </div>
   <div id="ast-scroll-top" tabindex="0" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both">
     <span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg"
@@ -6002,105 +5411,98 @@ Es una empresa peruana con sólida experiencia en la comercialización de aceros
             </div>
           </div>
         </div>
-        <div class="qlwapp-body">
-          <a class="qlwapp-account" data-action="open" data-phone="51926531258"
-            data-message="¡Hola! Deseo más información sobre los servicios que brinda." role="button" tabindex="0"
-            target="_blank">
-            <div class="qlwapp-avatar">
-              <div class="qlwapp-avatar-container">
-                <img alt="Metal Cam Ingenieros " src="images/negali_logo.svg">
-              </div>
+             <div class="qlwapp-body">
+              <a class="qlwapp-account" data-action="open" data-phone="51926531258"
+                data-message="¡Hola! Deseo más información sobre los servicios que brinda." role="button" tabindex="0"
+                target="_blank">
+                <div class="qlwapp-avatar">
+                  <div class="qlwapp-avatar-container">
+                    <img alt="Negali" src="images/negali_logo.svg">
+                  </div>
+                </div>
+                <div class="qlwapp-info">
+                  <span class="qlwapp-label">Informes</span>
+                  <span class="qlwapp-name">Negali : Negociación de Acero Laminado Industrial</span>
+                </div>
+              </a>
             </div>
-            <div class="qlwapp-info">
-              <span class="qlwapp-label">Informes</span>
-              <span class="qlwapp-name">Negali : Negociación de Acero Laminado Industrial</span>
-            </div>
-          </a>
-        </div>
-        <style>
-          .qlwapp-body {
-            display: flex;
-            flex-direction: row;
-            /* En pantallas grandes, los elementos estarán en fila */
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            /* Limitar el ancho máximo */
-            width: 100%;
-            margin: 0 auto;
-          }
-
-          .qlwapp-account {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-          }
-
-          .qlwapp-avatar {
-            margin-right: 15px;
-          }
-
-          .qlwapp-avatar-container img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 50%;
-          }
-
-          .qlwapp-info {
-            display: flex;
-            flex-direction: column;
-          }
-
-          .qlwapp-label {
-            font-size: 14px;
-            color: #888;
-          }
-
-          .qlwapp-name {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-          }
-
-          /* Estilo responsivo */
-          @media (max-width: 768px) {
-            .qlwapp-body {
-              flex-direction: column;
-              /* En pantallas más pequeñas, los elementos se apilarán */
+          <style>
+              .qlwapp-body {
+              display: flex;
+              flex-direction: row;  /* En pantallas grandes, los elementos estarán en fila */
               align-items: center;
-              /* Centrar los elementos */
-              text-align: center;
-              /* Alinear el texto al centro */
-              padding: 15px;
+              justify-content: flex-start;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              max-width: 600px; /* Limitar el ancho máximo */
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            .qlwapp-account {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              color: inherit;
+            }
+
+            .qlwapp-avatar {
+              margin-right: 15px;
             }
 
             .qlwapp-avatar-container img {
-              width: 60px;
-              /* Aumentar el tamaño del avatar en móviles */
-              height: 60px;
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+              border-radius: 50%;
             }
 
             .qlwapp-info {
-              margin-top: 10px;
-            }
-
-            .qlwapp-name {
-              font-size: 14px;
-              /* Ajustar el tamaño de texto en pantallas pequeñas */
+              display: flex;
+              flex-direction: column;
             }
 
             .qlwapp-label {
-              font-size: 12px;
-              /* Ajustar el tamaño de texto en pantallas pequeñas */
+              font-size: 14px;
+              color: #888;
             }
-          }
-        </style>
+
+            .qlwapp-name {
+              font-size: 16px;
+              font-weight: bold;
+              color: #333;
+            }
+
+            /* Estilo responsivo */
+            @media (max-width: 768px) {
+              .qlwapp-body {
+                flex-direction: column; /* En pantallas más pequeñas, los elementos se apilarán */
+                align-items: center; /* Centrar los elementos */
+                text-align: center; /* Alinear el texto al centro */
+                padding: 15px;
+              }
+
+              .qlwapp-avatar-container img {
+                width: 60px; /* Aumentar el tamaño del avatar en móviles */
+                height: 60px;
+              }
+
+              .qlwapp-info {
+                margin-top: 10px;
+              }
+
+              .qlwapp-name {
+                font-size: 14px; /* Ajustar el tamaño de texto en pantallas pequeñas */
+              }
+
+              .qlwapp-label {
+                font-size: 12px; /* Ajustar el tamaño de texto en pantallas pequeñas */
+              }
+            }
+
+         </style>
         <div class="qlwapp-footer">
           <p>Contáctanos</p>
         </div>
@@ -6147,18 +5549,6 @@ Es una empresa peruana con sólida experiencia en la comercialización de aceros
     src="https://metalcamingenieros.com/wp-content/litespeed/js/b98c0ee3ea591990c1a9824d37ceb410.js?ver=eb410"
     id="qlwapp-js" defer data-deferred="1"></script>
   <script data-optimized="1"
-    src="https://metalcamingenieros.com/wp-content/litespeed/js/fccba71660f638404211d2848ff9b959.js?ver=9b959"
-    id="jquery-slick-js" defer data-deferred="1"></script>
-  <script data-optimized="1"
-    src="https://metalcamingenieros.com/wp-content/litespeed/js/39d068bc29f088a2007a8c4af93c969f.js?ver=c969f"
-    id="jet-plugins-js" defer data-deferred="1"></script>
-  <script id="jet-engine-frontend-js-extra"
-    src="data:text/javascript;base64,dmFyIEpldEVuZ2luZVNldHRpbmdzPXsiYWpheHVybCI6Imh0dHBzOlwvXC9tZXRhbGNhbWluZ2VuaWVyb3MuY29tXC93cC1hZG1pblwvYWRtaW4tYWpheC5waHAiLCJhamF4bGlzdGluZyI6Imh0dHBzOlwvXC9tZXRhbGNhbWluZ2VuaWVyb3MuY29tXC8/bm9jYWNoZT0xNzQ5ODgzODY5IiwicmVzdE5vbmNlIjoiN2QzYzMxNzY5OSIsImhvdmVyQWN0aW9uVGltZW91dCI6IjQwMCIsImFkZGVkUG9zdENTUyI6WyIxOTgiXX0="
-    defer></script>
-  <script data-optimized="1"
-    src="https://metalcamingenieros.com/wp-content/litespeed/js/d91c510206e0f3a885d0da9251615cc6.js?ver=15cc6"
-    id="jet-engine-frontend-js" defer data-deferred="1"></script>
-  <script data-optimized="1"
     src="https://metalcamingenieros.com/wp-content/litespeed/js/18e99b9e1851dddec9ede184453447bd.js?ver=447bd"
     id="elementor-webpack-runtime-js" defer data-deferred="1"></script>
   <script data-optimized="1"
@@ -6171,7 +5561,7 @@ Es una empresa peruana con sólida experiencia en la comercialización de aceros
     src="https://metalcamingenieros.com/wp-content/litespeed/js/836da3c138c08add5cb3510e5b4139da.js?ver=139da"
     id="jquery-ui-core-js" defer data-deferred="1"></script>
   <script id="elementor-frontend-js-before"
-    src="data:text/javascript;base64,dmFyIGVsZW1lbnRvckZyb250ZW5kQ29uZmlnPXsiZW52aXJvbm1lbnRNb2RlIjp7ImVkaXQiOiExLCJ3cFByZXZpZXciOiExLCJpc1NjcmlwdERlYnVnIjohMX0sImkxOG4iOnsic2hhcmVPbkZhY2Vib29rIjoiQ29tcGFydGlyIGVuIEZhY2Vib29rIiwic2hhcmVPblR3aXR0ZXIiOiJDb21wYXJ0aXIgZW4gVHdpdHRlciIsInBpbkl0IjoiUGluZWFyIiwiZG93bmxvYWQiOiJEZXNjYXJnYXIiLCJkb3dubG9hZEltYWdlIjoiRGVzY2FyZ2FyIGltYWdlbiIsImZ1bGxzY3JlZW4iOiJQYW50YWxsYSBjb21wbGV0YSIsInpvb20iOiJab29tIiwic2hhcmUiOiJDb21wYXJ0aXIiLCJwbGF5VmlkZW8iOiJSZXByb2R1Y2lyIHZcdTAwZWRkZW8iLCJwcmV2aW91cyI6IkFudGVyaW9yIiwibmV4dCI6IlNpZ3VpZW50ZSIsImNsb3NlIjoiQ2VycmFyIiwiYTExeUNhcm91c2VsV3JhcHBlckFyaWFMYWJlbCI6IkNhcnJ1c2VsIHwgU2Nyb2xsIGhvcml6b250YWw6IEZsZWNoYSBpenF1aWVyZGEgeSBkZXJlY2hhIiwiYTExeUNhcm91c2VsUHJldlNsaWRlTWVzc2FnZSI6IkRpYXBvc2l0aXZhIGFudGVyaW9yIiwiYTExeUNhcm91c2VsTmV4dFNsaWRlTWVzc2FnZSI6IkRpYXBvc2l0aXZhIHNpZ3VpZW50ZSIsImExMXlDYXJvdXNlbEZpcnN0U2xpZGVNZXNzYWdlIjoiRXN0YSBlcyBsYSBwcmltZXJhIGRpYXBvc2l0aXZhIiwiYTExeUNhcm91c2VsTGFzdFNsaWRlTWVzc2FnZSI6IkVzdGEgZXMgbGEgXHUwMGZhbHRpbWEgZGlhcG9zaXRpdmEiLCJhMTF5Q2Fyb3VzZWxQYWdpbmF0aW9uQnVsbGV0TWVzc2FnZSI6IklyIGEgbGEgZGlhcG9zaXRpdmEifSwiaXNfcnRsIjohMSwiYnJlYWtwb2ludHMiOnsieHMiOjAsInNtIjo0ODAsIm1kIjo3NjgsImxnIjoxMDI1LCJ4bCI6MTQ0MCwieHhsIjoxNjAwfSwicmVzcG9uc2l2ZSI6eyJicmVha3BvaW50cyI6eyJtb2JpbGUiOnsibGFiZWwiOiJNXHUwMGYzdmlsIHZlcnRpY2FsIiwidmFsdWUiOjc2NywiZGVmYXVsdF92YWx1ZSI6NzY3LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMH0sIm1vYmlsZV9leHRyYSI6eyJsYWJlbCI6Ik1cdTAwZjN2aWwgaG9yaXpvbnRhbCIsInZhbHVlIjo4ODAsImRlZmF1bHRfdmFsdWUiOjg4MCwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6ITF9LCJ0YWJsZXQiOnsibGFiZWwiOiJUYWJsZXRhIHZlcnRpY2FsIiwidmFsdWUiOjEwMjQsImRlZmF1bHRfdmFsdWUiOjEwMjQsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiEwfSwidGFibGV0X2V4dHJhIjp7ImxhYmVsIjoiVGFibGV0YSBob3Jpem9udGFsIiwidmFsdWUiOjEyMDAsImRlZmF1bHRfdmFsdWUiOjEyMDAsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiExfSwibGFwdG9wIjp7ImxhYmVsIjoiUG9ydFx1MDBlMXRpbCIsInZhbHVlIjoxMzY2LCJkZWZhdWx0X3ZhbHVlIjoxMzY2LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMX0sIndpZGVzY3JlZW4iOnsibGFiZWwiOiJQYW50YWxsYSBncmFuZGUiLCJ2YWx1ZSI6MjQwMCwiZGVmYXVsdF92YWx1ZSI6MjQwMCwiZGlyZWN0aW9uIjoibWluIiwiaXNfZW5hYmxlZCI6ITF9fX0sInZlcnNpb24iOiIzLjIzLjQiLCJpc19zdGF0aWMiOiExLCJleHBlcmltZW50YWxGZWF0dXJlcyI6eyJlX29wdGltaXplZF9jc3NfbG9hZGluZyI6ITAsImVfZm9udF9pY29uX3N2ZyI6ITAsImFkZGl0aW9uYWxfY3VzdG9tX2JyZWFrcG9pbnRzIjohMCwiY29udGFpbmVyIjohMCwiY29udGFpbmVyX2dyaWQiOiEwLCJlX3N3aXBlcl9sYXRlc3QiOiEwLCJlX25lc3RlZF9hdG9taWNfcmVwZWF0ZXJzIjohMCwiZV9vcHRpbWl6ZWRfY29udHJvbF9sb2FkaW5nIjohMCwiZV9vbmJvYXJkaW5nIjohMCwiaG9tZV9zY3JlZW4iOiEwLCJlZGl0b3JfdjIiOiEwLCJhaS1sYXlvdXQiOiEwLCJlX2xhenlsb2FkIjohMCwiZV9lbGVtZW50X2NhY2hlIjohMCwibGluay1pbi1iaW8iOiEwLCJmbG9hdGluZy1idXR0b25zIjohMH0sInVybHMiOnsiYXNzZXRzIjoiaHR0cHM6XC9cL21ldGFsY2FtaW5nZW5pZXJvcy5jb21cL3dwLWNvbnRlbnRcL3BsdWdpbnNcL2VsZW1lbnRvclwvYXNzZXRzXC8iLCJhamF4dXJsIjoiaHR0cHM6XC9cL21ldGFsY2FtaW5nZW5pZXJvcy5jb21cL3dwLWFkbWluXC9hZG1pbi1hamF4LnBocCJ9LCJub25jZXMiOnsiZmxvYXRpbmdCdXR0b25zQ2xpY2tUcmFja2luZyI6ImE1ZWJhOTIxMjEifSwic3dpcGVyQ2xhc3MiOiJzd2lwZXIiLCJzZXR0aW5ncyI6eyJwYWdlIjpbXSwiZWRpdG9yUHJlZmVyZW5jZXMiOltdfSwia2l0Ijp7ImFjdGl2ZV9icmVha3BvaW50cyI6WyJ2aWV3cG9ydF9tb2JpbGUiLCJ2aWV3cG9ydF90YWJsZXQiXSwiZ2xvYmFsX2ltYWdlX2xpZ2h0Ym94IjoieWVzIiwibGlnaHRib3hfZW5hYmxlX2NvdW50ZXIiOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfZnVsbHNjcmVlbiI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV96b29tIjoieWVzIiwibGlnaHRib3hfZW5hYmxlX3NoYXJlIjoieWVzIiwibGlnaHRib3hfdGl0bGVfc3JjIjoidGl0bGUiLCJsaWdodGJveF9kZXNjcmlwdGlvbl9zcmMiOiJkZXNjcmlwdGlvbiJ9LCJwb3N0Ijp7ImlkIjoxMCwidGl0bGUiOiJNZXRhbCUyMENhbSUyMCVFMiU4MCU5MyUyMEluZ2VuaWVyb3MiLCJleGNlcnB0IjoiIiwiZmVhdHVyZWRJbWFnZSI6ITF9fQ=="
+    src="data:text/javascript;base64,dmFyIGVsZW1lbnRvckZyb250ZW5kQ29uZmlnPXsiZW52aXJvbm1lbnRNb2RlIjp7ImVkaXQiOiExLCJ3cFByZXZpZXciOiExLCJpc1NjcmlwdERlYnVnIjohMX0sImkxOG4iOnsic2hhcmVPbkZhY2Vib29rIjoiQ29tcGFydGlyIGVuIEZhY2Vib29rIiwic2hhcmVPblR3aXR0ZXIiOiJDb21wYXJ0aXIgZW4gVHdpdHRlciIsInBpbkl0IjoiUGluZWFyIiwiZG93bmxvYWQiOiJEZXNjYXJnYXIiLCJkb3dubG9hZEltYWdlIjoiRGVzY2FyZ2FyIGltYWdlbiIsImZ1bGxzY3JlZW4iOiJQYW50YWxsYSBjb21wbGV0YSIsInpvb20iOiJab29tIiwic2hhcmUiOiJDb21wYXJ0aXIiLCJwbGF5VmlkZW8iOiJSZXByb2R1Y2lyIHZcdTAwZWRkZW8iLCJwcmV2aW91cyI6IkFudGVyaW9yIiwibmV4dCI6IlNpZ3VpZW50ZSIsImNsb3NlIjoiQ2VycmFyIiwiYTExeUNhcm91c2VsV3JhcHBlckFyaWFMYWJlbCI6IkNhcnJ1c2VsIHwgU2Nyb2xsIGhvcml6b250YWw6IEZsZWNoYSBpenF1aWVyZGEgeSBkZXJlY2hhIiwiYTExeUNhcm91c2VsUHJldlNsaWRlTWVzc2FnZSI6IkRpYXBvc2l0aXZhIGFudGVyaW9yIiwiYTExeUNhcm91c2VsTmV4dFNsaWRlTWVzc2FnZSI6IkRpYXBvc2l0aXZhIHNpZ3VpZW50ZSIsImExMXlDYXJvdXNlbEZpcnN0U2xpZGVNZXNzYWdlIjoiRXN0YSBlcyBsYSBwcmltZXJhIGRpYXBvc2l0aXZhIiwiYTExeUNhcm91c2VsTGFzdFNsaWRlTWVzc2FnZSI6IkVzdGEgZXMgbGEgXHUwMGZhbHRpbWEgZGlhcG9zaXRpdmEiLCJhMTF5Q2Fyb3VzZWxQYWdpbmF0aW9uQnVsbGV0TWVzc2FnZSI6IklyIGEgbGEgZGlhcG9zaXRpdmEifSwiaXNfcnRsIjohMSwiYnJlYWtwb2ludHMiOnsieHMiOjAsInNtIjo0ODAsIm1kIjo3NjgsImxnIjoxMDI1LCJ4bCI6MTQ0MCwieHhsIjoxNjAwfSwicmVzcG9uc2l2ZSI6eyJicmVha3BvaW50cyI6eyJtb2JpbGUiOnsibGFiZWwiOiJNXHUwMGYzdmlsIHZlcnRpY2FsIiwidmFsdWUiOjc2NywiZGVmYXVsdF92YWx1ZSI6NzY3LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMH0sIm1vYmlsZV9leHRyYSI6eyJsYWJlbCI6Ik1cdTAwZjN2aWwgaG9yaXpvbnRhbCIsInZhbHVlIjo4ODAsImRlZmF1bHRfdmFsdWUiOjg4MCwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6ITF9LCJ0YWJsZXQiOnsibGFiZWwiOiJUYWJsZXRhIHZlcnRpY2FsIiwidmFsdWUiOjEwMjQsImRlZmF1bHRfdmFsdWUiOjEwMjQsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiEwfSwidGFibGV0X2V4dHJhIjp7ImxhYmVsIjoiVGFibGV0YSBob3Jpem9udGFsIiwidmFsdWUiOjEyMDAsImRlZmF1bHRfdmFsdWUiOjEyMDAsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiExfSwibGFwdG9wIjp7ImxhYmVsIjoiUG9ydFx1MDBlMXRpbCIsInZhbHVlIjoxMzY2LCJkZWZhdWx0X3ZhbHVlIjoxMzY2LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMX0sIndpZGVzY3JlZW4iOnsibGFiZWwiOiJQYW50YWxsYSBncmFuZGUiLCJ2YWx1ZSI6MjQwMCwiZGVmYXVsdF92YWx1ZSI6MjQwMCwiZGlyZWN0aW9uIjoibWluIiwiaXNfZW5hYmxlZCI6ITF9fX0sInZlcnNpb24iOiIzLjIzLjQiLCJpc19zdGF0aWMiOiExLCJleHBlcmltZW50YWxGZWF0dXJlcyI6eyJlX29wdGltaXplZF9jc3NfbG9hZGluZyI6ITAsImVfZm9udF9pY29uX3N2ZyI6ITAsImFkZGl0aW9uYWxfY3VzdG9tX2JyZWFrcG9pbnRzIjohMCwiY29udGFpbmVyIjohMCwiY29udGFpbmVyX2dyaWQiOiEwLCJlX3N3aXBlcl9sYXRlc3QiOiEwLCJlX25lc3RlZF9hdG9taWNfcmVwZWF0ZXJzIjohMCwiZV9vcHRpbWl6ZWRfY29udHJvbF9sb2FkaW5nIjohMCwiZV9vbmJvYXJkaW5nIjohMCwiaG9tZV9zY3JlZW4iOiEwLCJlZGl0b3JfdjIiOiEwLCJhaS1sYXlvdXQiOiEwLCJlX2xhenlsb2FkIjohMCwiZV9lbGVtZW50X2NhY2hlIjohMCwibGluay1pbi1iaW8iOiEwLCJmbG9hdGluZy1idXR0b25zIjohMH0sInVybHMiOnsiYXNzZXRzIjoiaHR0cHM6XC9cL21ldGFsY2FtaW5nZW5pZXJvcy5jb21cL3dwLWNvbnRlbnRcL3BsdWdpbnNcL2VsZW1lbnRvclwvYXNzZXRzXC8iLCJhamF4dXJsIjoiaHR0cHM6XC9cL21ldGFsY2FtaW5nZW5pZXJvcy5jb21cL3dwLWFkbWluXC9hZG1pbi1hamF4LnBocCJ9LCJub25jZXMiOnsiZmxvYXRpbmdCdXR0b25zQ2xpY2tUcmFja2luZyI6ImE1ZWJhOTIxMjEifSwic3dpcGVyQ2xhc3MiOiJzd2lwZXIiLCJzZXR0aW5ncyI6eyJwYWdlIjpbXSwiZWRpdG9yUHJlZmVyZW5jZXMiOltdfSwia2l0Ijp7ImFjdGl2ZV9icmVha3BvaW50cyI6WyJ2aWV3cG9ydF9tb2JpbGUiLCJ2aWV3cG9ydF90YWJsZXQiXSwiZ2xvYmFsX2ltYWdlX2xpZ2h0Ym94IjoieWVzIiwibGlnaHRib3hfZW5hYmxlX2NvdW50ZXIiOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfZnVsbHNjcmVlbiI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV96b29tIjoieWVzIiwibGlnaHRib3hfZW5hYmxlX3NoYXJlIjoieWVzIiwibGlnaHRib3hfdGl0bGVfc3JjIjoidGl0bGUiLCJsaWdodGJveF9kZXNjcmlwdGlvbl9zcmMiOiJkZXNjcmlwdGlvbiJ9LCJwb3N0Ijp7ImlkIjo2NjQsInRpdGxlIjoiTm9zb3Ryb3MlMjAlRTIlODAlOTMlMjBNZXRhbCUyMENhbSIsImV4Y2VycHQiOiIiLCJmZWF0dXJlZEltYWdlIjohMX19"
     defer></script>
   <script data-optimized="1"
     src="https://metalcamingenieros.com/wp-content/litespeed/js/58008b36ad74a2a3be64c47165fa565a.js?ver=a565a"
@@ -6197,6 +5587,6 @@ Es una empresa peruana con sólida experiencia en la comercialización de aceros
 </body>
 
 </html>
-<!-- Page optimized by LiteSpeed Cache @2025-06-14 01:51:10 -->
+<!-- Page optimized by LiteSpeed Cache @2025-06-14 03:28:21 -->
 
-<!-- Page cached by LiteSpeed Cache 7.1 on 2025-06-14 01:51:09 -->
+<!-- Page cached by LiteSpeed Cache 7.1 on 2025-06-14 03:28:21 -->
